@@ -58897,6 +58897,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:digitacion.CafeteriaCrearEmpClie._Header">
+<summary>
+Control Header.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:digitacion.CafeteriaCrearEmpClie._Pnl_Message">
 <summary>
 Control Pnl_Message.
@@ -58933,18 +58942,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.CafeteriaCrearEmpClie._TxtValorTotal">
+<member name="F:digitacion.CafeteriaCrearEmpClie._TxtNombreCliente">
 <summary>
-Control TxtValorTotal.
+Control TxtNombreCliente.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.CafeteriaCrearEmpClie._Gtg_TotalCompras">
+<member name="F:digitacion.CafeteriaCrearEmpClie._btn_AgregarCliente">
 <summary>
-Control Gtg_TotalCompras.
+Control btn_AgregarCliente.
 </summary>
 <remarks>
 Campo generado automáticamente.

@@ -1,5 +1,4 @@
-﻿Imports System.Data.SqlClient
-Public Class clsCafeteriaProductos
+﻿Public Class clsCafeteriaProductos
     Private _idProducto As Integer
     Private _nombreProducto As String
     Private _idCategoria As Integer
@@ -113,15 +112,19 @@ Public Class clsCafeteriaProductos
 
     'empiezo a hacer conexion con la base de datos para insertar datos 
     'utilizo stored procedured y una propiedad como parametro que recibe
-    Public Sub RegEmpleadosCafeteria()
+    Public Function RegEmpleadosCafeteria() As DataSet
+        Dim Ingreso As New DataSet
+
         Dim cn As New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexion2").ConnectionString) ' Conexion con la base 
         Try
             Dim cms As New SqlClient.SqlCommand
             cn.Open()
             cms.CommandType = "SpRegistrarEmpleado"
+            cms.CommandText = "Execute SpRegistrarEmpleado,@NombreEmpleado"
             cms.Parameters.AddWithValue("@NombreEmpleado", _nombreEmpleado)
             cms.Connection = cn
             cms.ExecuteNonQuery()
+            Return Ingreso
         Catch ex As Exception
             Throw ex
         Finally
@@ -129,6 +132,6 @@ Public Class clsCafeteriaProductos
                 cn.Close()
             End If
         End Try
-    End Sub
+    End Function
 
 End Class
