@@ -28,7 +28,7 @@
 
         End If
     End Sub
-    Private Sub AddMenuItem(ByRef mnuMenuItem As MenuItem, ByVal dtMenuItems As Data.DataTable)
+    Protected Sub AddMenuItem(ByRef mnuMenuItem As MenuItem, ByVal dtMenuItems As Data.DataTable)
 
         'recorremos cada elemento del datatable para poder determinar cuales son elementos hijos
         'del menuitem dado pasado como parametro ByRef.

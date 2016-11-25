@@ -92,19 +92,19 @@ Public Class clsrrhh
     Protected strlIPSalida As String
     Protected strlComp_Mejora As String
     Protected strlCod_Archivo As Integer
-    Private _Validacion As String
-    Private _Version As String
-    Private _Observacion As String
+    Protected _Validacion As String
+    Protected _Version As String
+    Protected _Observacion As String
     Protected strlCod_Diagnostico As String
     Protected strlUbicacion As String
     Protected strlAprobacion As String
     Protected strlFc_Aprueba As String
     Dim DteXCEL As New DataTable ''Malla de turno
     Dim fecha As DateTime = Now ''Malla de turno
-    Private _Fc_ruta As String ''Malla de turno
-    Private _Tipo_Horario As String
-    Private _Cargo_Cliente As String
-    Private _Segmento As String
+    Protected _Fc_ruta As String ''Malla de turno
+    Protected _Tipo_Horario As String
+    Protected _Cargo_Cliente As String
+    Protected _Segmento As String
 
     Public Property Segmento As String
         Get
@@ -939,7 +939,7 @@ Public Class clsrrhh
             strldocumento = value
         End Set
     End Property
-    Private _Fecha_Acta As Date
+    Protected _Fecha_Acta As Date
     Public Property Fecha_Acta() As Date
         Get
             Return _Fecha_Acta
@@ -2307,15 +2307,15 @@ Public Class clsrrhh
 
     '' usuarios
     ''Informacion Usu,Pass
-    Private _Usu_CRM As String
-    Private _Fecha_Creacion As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Codigo_Atuliza As String
-    Private _Plataforma As String
-    Private _Estado_Plataforma As String
-    Private _Usuario_Plataforma As String
-    Private _Password_Plataforma As String
-    Private _Formato As String
-    Private _Estado_General As String
+    Protected _Usu_CRM As String
+    Protected _Fecha_Creacion As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Codigo_Atuliza As String
+    Protected _Plataforma As String
+    Protected _Estado_Plataforma As String
+    Protected _Usuario_Plataforma As String
+    Protected _Password_Plataforma As String
+    Protected _Formato As String
+    Protected _Estado_General As String
 
     Public Property Plataforma As String
         Get
@@ -2393,10 +2393,10 @@ Public Class clsrrhh
         End Set
     End Property
 
-    Private _Id_Estado_Nacimiento As Integer
-    Private _Id_Pais_Nacimiento As Integer
-    Private _Id_Nacionalidad As Integer
-    Private _Id_Ciudad_Nacimiento As Integer
+    Protected _Id_Estado_Nacimiento As Integer
+    Protected _Id_Pais_Nacimiento As Integer
+    Protected _Id_Nacionalidad As Integer
+    Protected _Id_Ciudad_Nacimiento As Integer
     Public Property Id_Nacionalidad As Integer
         Get
             Return _Id_Nacionalidad
@@ -2430,12 +2430,12 @@ Public Class clsrrhh
         End Set
     End Property
 
-    Private _Semestre_Actual_U As String
-    Private _Pers_Contac_Emerg As String
-    Private _Tel_Contac_Emeg As String
-    Private _Toma_Medicamentos As String
-    Private _Obs_Medicamentos As String
-    Private _Obs_Ant_Salud As String
+    Protected _Semestre_Actual_U As String
+    Protected _Pers_Contac_Emerg As String
+    Protected _Tel_Contac_Emeg As String
+    Protected _Toma_Medicamentos As String
+    Protected _Obs_Medicamentos As String
+    Protected _Obs_Ant_Salud As String
     Public Property Semestre_Actual_U As String
         Get
             Return _Semestre_Actual_U
@@ -2486,8 +2486,8 @@ Public Class clsrrhh
     End Property
 
 
-    Private Con_admin_cham As New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexion2").ConnectionString) ' Conexion solo con la base de datos admin_cham
-    Private Con_admin_cham_Datos As New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexioncontrol").ConnectionString) ' Conexion con la base de datos admin_cham y otros
+    Protected Con_admin_cham As New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexion2").ConnectionString) ' Conexion solo con la base de datos admin_cham
+    Protected Con_admin_cham_Datos As New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexioncontrol").ConnectionString) ' Conexion con la base de datos admin_cham y otros
 
 
 

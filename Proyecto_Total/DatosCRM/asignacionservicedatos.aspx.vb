@@ -28,7 +28,7 @@ Public Class asignacionservicedatos
             Lbl_Mensage.Text = "<span class='glyphicon glyphicon-remove-sign'></span> " & ex.Message
         End Try
     End Sub
-    Private Sub Cargar_Drl_Agent()
+    Protected Sub Cargar_Drl_Agent()
         With Drl_Agent
             .DataSource = Obj_General.consultaagenteescala
             .DataTextField = "nombreu"
@@ -48,7 +48,7 @@ Public Class asignacionservicedatos
         End With
 
     End Sub
-    Private Sub Cons_Agent_Asign()
+    Protected Sub Cons_Agent_Asign()
         Try
             Dim objdatos As New clscrmdatos
             Session("Agentes_Asignados") = objdatos.consultaenprocescalaservdatos.Tables(0)
@@ -64,7 +64,7 @@ Public Class asignacionservicedatos
             Lbl_Mensage.Text = "<span class='glyphicon glyphicon-remove-sign'></span> " & ex.Message
         End Try
     End Sub
-    Private Sub GV_Agen_Casos_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles GV_Agen_Casos.PageIndexChanging
+    Protected Sub GV_Agen_Casos_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles GV_Agen_Casos.PageIndexChanging
         Try
             If TypeOf Session("Agentes_Asignados") Is DataTable Then
                 GV_Agen_Casos.PageIndex = e.NewPageIndex
@@ -131,7 +131,7 @@ Public Class asignacionservicedatos
             ScriptManager.RegisterStartupScript(Page, GetType(Page), "P", "setTimeout('Pleg_Loading()', 250);", True)
         End Try
     End Sub
-    Private Sub dtggeneral_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
+    Protected Sub dtggeneral_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
         Try
             If TypeOf Session("Cons_Asig_Servis_Datos") Is DataTable Then
                 dtggeneral.PageIndex = e.NewPageIndex
@@ -219,7 +219,7 @@ Public Class asignacionservicedatos
     End Sub
 
     '################################Devueltos####################################
-    Private Sub Cargar_Drl_Agent_Dev()
+    Protected Sub Cargar_Drl_Agent_Dev()
         With Drl_Agent_Dev
             .DataSource = Obj_General.consultaagenteescala
             .DataTextField = "nombreu"

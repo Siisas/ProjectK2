@@ -47,7 +47,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub asignado()
+    Protected Sub asignado()
         Try
             Dim objdatos As New clscrmdatos
             dtgestad.DataSource = objdatos.enprocesofallatec
@@ -144,7 +144,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub dtgestad_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgestad.PageIndexChanging
+    Protected Sub dtgestad_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgestad.PageIndexChanging
         Try
             dtgestad.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             asignado()

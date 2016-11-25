@@ -1,25 +1,25 @@
 ﻿Public Class clsBoldChat
     'Bandeja Bolchat'
-    Private _Idcaso As Int64
-    Private _Ing_Remite As String
-    Private _Idusuario As String
-    Private _Cas_Fecha_Registro As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Cas_Fecha_Recepcion As String
-    Private _Recomen_Prioridad As String
-    Private _Tipo As Integer
-    Private _Tipo_Soporte As Integer
-    Private _Segmento As Integer
-    Private _Min_Ac As Int64
-    Private _Nom_Cliente As String
-    Private _Equipo_Ac As String
-    Private _Bandeja As String
-    Private _Cantidad As Integer
-    Private strlestado As String
-    Private strlidtipo As Integer
-    Private _Fecha_Inicio As String
-    Private _Fecha_Fin As String
-    Private _Fecha_Inicio_Gestion As String
-    Private _Fecha_Fin_Gestion As String
+    Protected _Idcaso As Int64
+    Protected _Ing_Remite As String
+    Protected _Idusuario As String
+    Protected _Cas_Fecha_Registro As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Cas_Fecha_Recepcion As String
+    Protected _Recomen_Prioridad As String
+    Protected _Tipo As Integer
+    Protected _Tipo_Soporte As Integer
+    Protected _Segmento As Integer
+    Protected _Min_Ac As Int64
+    Protected _Nom_Cliente As String
+    Protected _Equipo_Ac As String
+    Protected _Bandeja As String
+    Protected _Cantidad As Integer
+    Protected strlestado As String
+    Protected strlidtipo As Integer
+    Protected _Fecha_Inicio As String
+    Protected _Fecha_Fin As String
+    Protected _Fecha_Inicio_Gestion As String
+    Protected _Fecha_Fin_Gestion As String
 
     Public Property Fecha_Inicio_Gestion As String
         Get

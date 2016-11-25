@@ -29,7 +29,7 @@
         End Try
     End Sub
 
-    Private Sub traetipificacion()
+    Protected Sub traetipificacion()
         Try
             Dim objdatos As New clscalidad
             objdatos.tipo = drltipo.SelectedItem.Value
@@ -62,7 +62,7 @@
             Me.lblmsg.Text = "se ha producido un error:" & ex.Message
         End Try
     End Sub
-    Private Sub asigna()
+    Protected Sub asigna()
         Try
             Dim celda As Integer
             Dim valor As String
@@ -516,7 +516,7 @@
             Me.lblmsg.Text = "se ha producido un error:" & ex.Message
         End Try
     End Sub
-    Private Sub calcular()
+    Protected Sub calcular()
         Try
             Dim objdatos As New clscalidad
             If chk1.Checked = False Then

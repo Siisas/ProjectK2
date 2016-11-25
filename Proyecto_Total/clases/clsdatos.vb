@@ -42,7 +42,7 @@
     Protected strusuarioventaefec As String
     Protected decvalortotalventa As Decimal
     Protected decidventas As Decimal
-    Private _Cantidad As Int64
+    Protected _Cantidad As Int64
 
     Public Property Cantidad As Int64
         Get

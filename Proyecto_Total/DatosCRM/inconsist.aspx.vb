@@ -89,7 +89,7 @@
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span> " & ex.Message
         End Try
     End Sub
-    Private Sub dtggeneral_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
+    Protected Sub dtggeneral_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
         Try
             dtggeneral.PageIndex = e.NewPageIndex
             dtggeneral.DataSource = Session("dtggeneral")
@@ -98,7 +98,7 @@
             Throw ex
         End Try
     End Sub
-    Private Sub dtgaprobado_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgaprobado.PageIndexChanging
+    Protected Sub dtgaprobado_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgaprobado.PageIndexChanging
         Try
             dtgaprobado.PageIndex = e.NewPageIndex
             dtgaprobado.DataSource = Session("dtgaprobado")

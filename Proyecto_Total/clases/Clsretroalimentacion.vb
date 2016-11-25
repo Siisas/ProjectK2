@@ -1,61 +1,61 @@
 ﻿Public Class Clsretroalimentacion
 
 
-    Private _Nombre_Usu As String
-    Private _Nombre_Retro As String
-    Private _Id_Usuario As String
-    Private _Observacion As String
-    Private _Fecha_Actual As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Todo As String
-    Private _Cantidad As Integer
-    Private _Compromiso_Usu As String
-    Private _Conclusion As String
-    Private _Area As String
-    Private _Cod_Usuario As String
-    Private _Causas As String
-    Private _Fecha_Retro As DateTime
-    Private _Descripcion_Causa As String
-    Private _Fk_Cod_Retroalimentacion As Integer
-    Private _Cod_Retroalimentacion As Integer
-    Private _Cod_Retro As String
-    Private _Id_Auditoria As String
-    Private _Seguimiento As String
-    Private _Tipo_Retro As String
-    Private _Grupo As String
-    Private _Campania As String
-    Private _Agente As String
-    Private _Auditor As String
-    Private _Fc_Llamada As Date
-    Private _Estado_Caso As String
-    Private _Parametro As String
-    Private _Parametro0 As String
-    Private _Parametro1 As String
-    Private _Parametro2 As String
-    Private _Parametro3 As String
-    Private _Observacion0 As String
-    Private _Observacion1 As String
-    Private _Observacion2 As String
-    Private _Observacion3 As String
-    Private _Fc_Audit As Date
-    Private _Id_Caso As Int64
-    Private _Fc_Reg As Date
-    Private _Fc_Reg_CR As Date
-    Private _Fc_Reg_Actualiza As Date
-    Private _Fc_Retro As Date
-    Private _Validacion As String
-    Private _ObservacionP As String
-    Private _Fc_Inicial As Date
-    Private _Fc_Final As Date
-    Private _Calificacion As String
-    Private _Tiempo_Retroalimentacion As String
-    Private _Validacion_Version As String
+    Protected _Nombre_Usu As String
+    Protected _Nombre_Retro As String
+    Protected _Id_Usuario As String
+    Protected _Observacion As String
+    Protected _Fecha_Actual As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Todo As String
+    Protected _Cantidad As Integer
+    Protected _Compromiso_Usu As String
+    Protected _Conclusion As String
+    Protected _Area As String
+    Protected _Cod_Usuario As String
+    Protected _Causas As String
+    Protected _Fecha_Retro As DateTime
+    Protected _Descripcion_Causa As String
+    Protected _Fk_Cod_Retroalimentacion As Integer
+    Protected _Cod_Retroalimentacion As Integer
+    Protected _Cod_Retro As String
+    Protected _Id_Auditoria As String
+    Protected _Seguimiento As String
+    Protected _Tipo_Retro As String
+    Protected _Grupo As String
+    Protected _Campania As String
+    Protected _Agente As String
+    Protected _Auditor As String
+    Protected _Fc_Llamada As Date
+    Protected _Estado_Caso As String
+    Protected _Parametro As String
+    Protected _Parametro0 As String
+    Protected _Parametro1 As String
+    Protected _Parametro2 As String
+    Protected _Parametro3 As String
+    Protected _Observacion0 As String
+    Protected _Observacion1 As String
+    Protected _Observacion2 As String
+    Protected _Observacion3 As String
+    Protected _Fc_Audit As Date
+    Protected _Id_Caso As Int64
+    Protected _Fc_Reg As Date
+    Protected _Fc_Reg_CR As Date
+    Protected _Fc_Reg_Actualiza As Date
+    Protected _Fc_Retro As Date
+    Protected _Validacion As String
+    Protected _ObservacionP As String
+    Protected _Fc_Inicial As Date
+    Protected _Fc_Final As Date
+    Protected _Calificacion As String
+    Protected _Tiempo_Retroalimentacion As String
+    Protected _Validacion_Version As String
     '----Retroalimentacion-----'
-    Private _Item_1 As Integer
-    Private _Item_2 As Integer
-    Private _Item_3 As Integer
-    Private _Item_4 As Integer
-    Private _Item_5 As Integer
-    Private _Resultado As Decimal
+    Protected _Item_1 As Integer
+    Protected _Item_2 As Integer
+    Protected _Item_3 As Integer
+    Protected _Item_4 As Integer
+    Protected _Item_5 As Integer
+    Protected _Resultado As Decimal
 
     Public Property Item_1 As Integer
         Get
@@ -967,7 +967,7 @@
 
     End Function
 
-    Private Sub Limpiar_cajas()
+    Protected Sub Limpiar_cajas()
 
         Throw New NotImplementedException
     End Sub

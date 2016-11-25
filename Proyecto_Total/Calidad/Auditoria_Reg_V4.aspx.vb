@@ -151,7 +151,7 @@ Public Class Auditoria_Reg_V4
         End Try
     End Sub
     'btn validar
-    Private Sub BtnValidar_Click(sender As Object, e As EventArgs) Handles BtnValidar.Click
+    Protected Sub BtnValidar_Click(sender As Object, e As EventArgs) Handles BtnValidar.Click
         Try
             ObjValidacion.Validar_Herramientas(txtcaso, "Numero de Consecutivo")
             ObjCalidad.caso = txtcaso.Text
@@ -171,7 +171,7 @@ Public Class Auditoria_Reg_V4
         End Try
     End Sub
     'btn Consulta agente
-    Private Sub BtnConsultaAgente_Click(sender As Object, e As EventArgs) Handles BtnConsultaAgente.Click
+    Protected Sub BtnConsultaAgente_Click(sender As Object, e As EventArgs) Handles BtnConsultaAgente.Click
         Try
             ObjValidacion.Validar_Herramientas(TxtConsultaCod_Agente, "Codigo Agente")
             ObjCalidad.caso = -1
@@ -191,7 +191,7 @@ Public Class Auditoria_Reg_V4
         End Try
     End Sub
     'btn Guardar
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
+    Protected Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         Try
             'Validacion
             ObjValidacion.Validar_Herramientas(txtcaso, "Caso")
@@ -313,7 +313,7 @@ Public Class Auditoria_Reg_V4
         End Try
     End Sub
     'Metodo Limpiar herramientas
-    Private Sub Limpiar_Herramientas()
+    Protected Sub Limpiar_Herramientas()
         Try
             txtcaso.Text = ""
             drlNomAgente.Items.Clear()
@@ -337,7 +337,7 @@ Public Class Auditoria_Reg_V4
         End Try
     End Sub
     'btn Consulta
-    Private Sub BtnConsulta_Click(sender As Object, e As EventArgs) Handles BtnConsulta.Click
+    Protected Sub BtnConsulta_Click(sender As Object, e As EventArgs) Handles BtnConsulta.Click
         Try
             ObjValidacion.Validar_Herramientas(TxtCod_Consulta, "Id de auditoria")
             ObjCalidad.Cod_Calidad_Registro = TxtCod_Consulta.Text
@@ -399,7 +399,7 @@ Public Class Auditoria_Reg_V4
         End Try
     End Sub
     'metodo Ocultar herramientas
-    Private Sub Visibilidad_herramientas()
+    Protected Sub Visibilidad_herramientas()
         Try
             PanelGeneral.Visible = False
             PanelConsulta.Visible = False
@@ -427,7 +427,7 @@ Public Class Auditoria_Reg_V4
         End Try
     End Sub
     'Btn Consulta auditoria
-    Private Sub BtnConsultaAditorias_Click(sender As Object, e As EventArgs) Handles BtnConsultaAditorias.Click
+    Protected Sub BtnConsultaAditorias_Click(sender As Object, e As EventArgs) Handles BtnConsultaAditorias.Click
         Try
             ObjValidacion.Validar_Herramientas(TxtFechaInicio, "Fecha Inicio")
             ObjValidacion.Validar_Herramientas(TxtFechaFin, "Fecha Fin")
@@ -536,7 +536,7 @@ Public Class Auditoria_Reg_V4
         End Try
     End Sub
     'Cambia pagina
-    Private Sub dtggeneral_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
+    Protected Sub dtggeneral_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
         Try
             dtggeneral.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             dtggeneral.DataSource = Session("dtggeneral_Calidad_Registro_v4")

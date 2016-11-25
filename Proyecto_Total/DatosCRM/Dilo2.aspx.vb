@@ -1,7 +1,7 @@
 ﻿Public Class Dilo2
     Inherits System.Web.UI.Page
-    Private Obj_General As New clsgeneral
-    Private Obj_G_D As New Cls_Gestion_Datos
+    Protected Obj_General As New clsgeneral
+    Protected Obj_G_D As New Cls_Gestion_Datos
 #Region "Métodos"
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try

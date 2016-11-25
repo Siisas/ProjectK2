@@ -7,10 +7,10 @@
     Protected _Año As Integer
     Protected _Validacion As String
 
-    Private _ConSopDia As Integer
-    Private _OfrecNxmonitor As Integer
-    Private _Inst_Nxmonitorllamada As Integer
-    Private _Total_Ofrecimientos As Integer
+    Protected _ConSopDia As Integer
+    Protected _OfrecNxmonitor As Integer
+    Protected _Inst_Nxmonitorllamada As Integer
+    Protected _Total_Ofrecimientos As Integer
 
 
     Protected _Ciudad As String

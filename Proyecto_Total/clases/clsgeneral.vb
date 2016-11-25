@@ -174,9 +174,9 @@
         End Set
     End Property
 
-    Private _DivPol_Id_Ciudad As Integer
-    Private _DivPol_Id_Estado As Integer
-    Private _DivPol_Id_Pais As Integer
+    Protected _DivPol_Id_Ciudad As Integer
+    Protected _DivPol_Id_Estado As Integer
+    Protected _DivPol_Id_Pais As Integer
     Public Property DivPol_Id_Ciudad As Integer
         Get
             Return _DivPol_Id_Ciudad
@@ -213,7 +213,7 @@
     End Property
 
 
-    Private Conexion_ERP As New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexion").ConnectionString)
+    Protected Conexion_ERP As New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexion").ConnectionString)
 
     Public Function consultar() As DataSet
         Dim cn As New SqlClient.SqlConnection

@@ -158,7 +158,7 @@ Public Class consdilo
         End Try
     End Sub
 
-    Private Sub DtgGeneral_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles DtgGeneral.PageIndexChanging
+    Protected Sub DtgGeneral_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles DtgGeneral.PageIndexChanging
         Try
             DtgGeneral.PageIndex = e.NewPageIndex
             DtgGeneral.DataSource = Session("DtgGeneral")
@@ -168,7 +168,7 @@ Public Class consdilo
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span> " & ex.Message
         End Try
     End Sub
-    Private Sub Dtg_Seguimientos_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Seguimientos.RowDataBound
+    Protected Sub Dtg_Seguimientos_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Seguimientos.RowDataBound
         If (e.Row.RowType = DataControlRowType.DataRow) Or (e.Row.RowType = DataControlRowType.Header) Then
             e.Row.Cells(8).Visible = False
             If DataBinder.Eval(e.Row.DataItem, "Estado") = "Eliminado" Then

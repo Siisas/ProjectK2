@@ -3,8 +3,8 @@
     '''''''''''''''''''''''''''''''''''''''' CausaCS '''''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     'Tabla dbo.CausaCS
-    Private _Cod_Causa As Int64
-    Private _Nombre As String
+    Protected _Cod_Causa As Int64
+    Protected _Nombre As String
 
     Public Property Cod_Causa() As Int64
         Get
@@ -27,29 +27,29 @@
     '''''''''''''''''''''''''''''''''''''''CaidaSistema'''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     'Tabla dbo.CaidaSistema
-    Private _Cod_CS As Int64
-    Private _Fecha_Inicio As String
-    Private _Causa_Caida As Int64
-    Private _Detalle As String
-    Private _Fecha_Solucion As String
-    Private _Duracion_Falla As String
-    Private _Puestos_Afectados As String
-    Private _Solucion_Brindada As String
-    Private _Fecha_Registro As String
-    Private _Usuario As String
-    Private _Estado As String
-    Private _Cantidad As Integer
-    Private _Validacion As String
-    Private _Agente_1 As String
-    Private _Agente_2 As String
-    Private _Agente_3 As String
-    Private _Agente_4 As String
-    Private _Agente_5 As String
-    Private _Agente_6 As String
-    Private _Agente_7 As String
-    Private _Agente_8 As String
-    Private _Agente_9 As String
-    Private _Agente_10 As String
+    Protected _Cod_CS As Int64
+    Protected _Fecha_Inicio As String
+    Protected _Causa_Caida As Int64
+    Protected _Detalle As String
+    Protected _Fecha_Solucion As String
+    Protected _Duracion_Falla As String
+    Protected _Puestos_Afectados As String
+    Protected _Solucion_Brindada As String
+    Protected _Fecha_Registro As String
+    Protected _Usuario As String
+    Protected _Estado As String
+    Protected _Cantidad As Integer
+    Protected _Validacion As String
+    Protected _Agente_1 As String
+    Protected _Agente_2 As String
+    Protected _Agente_3 As String
+    Protected _Agente_4 As String
+    Protected _Agente_5 As String
+    Protected _Agente_6 As String
+    Protected _Agente_7 As String
+    Protected _Agente_8 As String
+    Protected _Agente_9 As String
+    Protected _Agente_10 As String
 
     Public Property Agente_10 As String
         Get
@@ -446,18 +446,18 @@
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''Productividad''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Fecha_Actual As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Fecha_Turno As String
-    Private _Gestionado As Integer
-    Private _Rechazado As Integer
-    Private _Asignado As Integer
-    Private _Reportado As Integer
-    Private _Cerrado As Integer
-    Private _Escalado As Integer
-    Private _CantidadH As Integer
-    Private _CantidadMinu As Integer
-    Private _Dia As String
-    Private _Grupo As String
+    Protected _Fecha_Actual As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Fecha_Turno As String
+    Protected _Gestionado As Integer
+    Protected _Rechazado As Integer
+    Protected _Asignado As Integer
+    Protected _Reportado As Integer
+    Protected _Cerrado As Integer
+    Protected _Escalado As Integer
+    Protected _CantidadH As Integer
+    Protected _CantidadMinu As Integer
+    Protected _Dia As String
+    Protected _Grupo As String
 
     Public Property Fecha_Actual() As String
         Get
@@ -1065,14 +1065,14 @@
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''' Registro Aspirante ''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Id_Aspirante As Int64
-    Private _Id_Aspirante_Update As Int64
-    Private _Nombre_Aspirante As String
-    Private _Apellido As String
-    Private _Telefono As Int64
-    Private _Celular As Int64
-    Private _Correo As String
-    Private _Cod_Proceso_Seleccion As Integer
+    Protected _Id_Aspirante As Int64
+    Protected _Id_Aspirante_Update As Int64
+    Protected _Nombre_Aspirante As String
+    Protected _Apellido As String
+    Protected _Telefono As Int64
+    Protected _Celular As Int64
+    Protected _Correo As String
+    Protected _Cod_Proceso_Seleccion As Integer
 
     Public Property Id_Aspirante() As Int64
         Get
@@ -1345,11 +1345,11 @@
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''Nivel_Academico'''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Cod_Nivel_Academico As Int64
-    Private _Fk_Cod_Estudio As Int64
-    Private _Descripcion As String
-    Private _Fk_Id_Aspirante_Estu As Int64
-    Private _CantidadE As Integer
+    Protected _Cod_Nivel_Academico As Int64
+    Protected _Fk_Cod_Estudio As Int64
+    Protected _Descripcion As String
+    Protected _Fk_Id_Aspirante_Estu As Int64
+    Protected _CantidadE As Integer
 
     Public Property Cod_Nivel_Academico() As Int64
         Get
@@ -1554,12 +1554,12 @@
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''Experiencia'''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Cod_Experiencialab As Int64
-    Private _Cargo_Explab As String
-    Private _Tiempo As String
-    Private _Tiempo_Consul As String
-    Private _Fk_Id_Aspirante_Explab As Int64
-    Private _CantidadExplab As Integer
+    Protected _Cod_Experiencialab As Int64
+    Protected _Cargo_Explab As String
+    Protected _Tiempo As String
+    Protected _Tiempo_Consul As String
+    Protected _Fk_Id_Aspirante_Explab As Int64
+    Protected _CantidadExplab As Integer
 
     Public Property Cod_Experiencialab() As Int64
         Get
@@ -1751,14 +1751,14 @@
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''Proceso_Seleccion''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    'Ya declarado en los atributos de aspirante'Private _Cod_Proceso_Seleccion As Integer
-    Private _Cargo As String
-    Private _Observacion As String
-    'Ya declarado en los atributos de caida del sistema'Private _Estado As String
-    Private _Cantidad_Requerida As Integer
-    Private _Cantidad_Obtenida As Integer
-    'Ya declarado en los atributos de caida del sistema'Private _Fecha_Inicio As String
-    Private _Fecha_Fin As String
+    'Ya declarado en los atributos de aspirante'Protected _Cod_Proceso_Seleccion As Integer
+    Protected _Cargo As String
+    Protected _Observacion As String
+    'Ya declarado en los atributos de caida del sistema'Protected _Estado As String
+    Protected _Cantidad_Requerida As Integer
+    Protected _Cantidad_Obtenida As Integer
+    'Ya declarado en los atributos de caida del sistema'Protected _Fecha_Inicio As String
+    Protected _Fecha_Fin As String
 
     Public Property Cargo As String
         Get
@@ -1963,9 +1963,9 @@
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''Estado_Seleccion'''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Cod_Estado_Seleccion As Integer
-    'Ya declarado en los atributos de aspirante'Private _Nombre As String
-    'Ya declarado en los atributos de Nivel_Academico'Private _Descripcion As String
+    Protected _Cod_Estado_Seleccion As Integer
+    'Ya declarado en los atributos de aspirante'Protected _Nombre As String
+    'Ya declarado en los atributos de Nivel_Academico'Protected _Descripcion As String
 
     Public Property Cod_Estado_Seleccion As Integer
         Get
@@ -1982,13 +1982,13 @@
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''Detalle_PS_A'''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Cod_Detalle_PS_A As Integer
-    Private _Fk_Cod_Filtro_Seleccion As Integer
-    'Ya declarado en los atributos de Proceso de seleccion'Private _Observacion As String
-    Private _Fecha As String
-    Private _Fk_Id_Aspirante As Int64
-    Private _Fk_Cod_Proceso_Seleccion As Integer
-    Private _Fk_Cod_Estado_Seleccion As Integer
+    Protected _Cod_Detalle_PS_A As Integer
+    Protected _Fk_Cod_Filtro_Seleccion As Integer
+    'Ya declarado en los atributos de Proceso de seleccion'Protected _Observacion As String
+    Protected _Fecha As String
+    Protected _Fk_Id_Aspirante As Int64
+    Protected _Fk_Cod_Proceso_Seleccion As Integer
+    Protected _Fk_Cod_Estado_Seleccion As Integer
 
     Public Property Cod_Detalle_PS_A As Integer
         Get
@@ -2279,20 +2279,20 @@
         End Try
     End Function
     ''' Polla Mundialista
-    Private _Cod_Polla_Mundialista_Equipo As Integer
-    Private _Nombre_Equipo_Polla As String
-    Private _Letra_Grupo As String
-    Private _Partido_N1 As Integer
-    Private _Partido_N2 As Integer
-    Private _Partido_N3 As Integer
+    Protected _Cod_Polla_Mundialista_Equipo As Integer
+    Protected _Nombre_Equipo_Polla As String
+    Protected _Letra_Grupo As String
+    Protected _Partido_N1 As Integer
+    Protected _Partido_N2 As Integer
+    Protected _Partido_N3 As Integer
     ''Registro
-    Private _Fc_Reg As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Id_Usuario As String
-    Private _Equipo1 As String
-    Private _Resultado1 As Integer
-    Private _Equipo2 As String
-    Private _Resultado2 As Integer
-    Private _EquipoGana As String
+    Protected _Fc_Reg As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Id_Usuario As String
+    Protected _Equipo1 As String
+    Protected _Resultado1 As Integer
+    Protected _Equipo2 As String
+    Protected _Resultado2 As Integer
+    Protected _EquipoGana As String
 
     Public Property EquipoGana As String
         Get

@@ -1,5 +1,6 @@
 ﻿Public Class CafeteriaCrearEmpClie
     Inherits System.Web.UI.Page
+
     Dim ObjProductosCafeteria As New clsCafeteriaProductos
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
@@ -18,7 +19,8 @@
     End Sub
 
     Protected Sub btn_AgregarEmpleado_Click(sender As Object, e As EventArgs) Handles btn_AgregarEmpleado.Click
-        ObjProductosCafeteria. = TxtNombreEmpleado.Text
 
+        ObjProductosCafeteria.PublicNombreEmpleado = TxtNombreEmpleado.Text
+        ObjProductosCafeteria.RegEmpleadosCafeteria()
     End Sub
 End Class

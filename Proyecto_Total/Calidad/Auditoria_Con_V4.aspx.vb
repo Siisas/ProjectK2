@@ -21,7 +21,7 @@
         End Try
     End Sub
 
-    Private Sub Consulta_Auditorias()
+    Protected Sub Consulta_Auditorias()
         Try
             ObjCalidad.Id_Usuario = CType(Session("permisos"), clsusuario).usuario
             Session("dtggeneral_Calidad_Registro_v4") = ObjCalidad.Consulta_Auditorias_Agente_V4
@@ -42,7 +42,7 @@
         End Try
     End Sub
 
-    Private Sub dtggeneral_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles dtggeneral.RowCommand
+    Protected Sub dtggeneral_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles dtggeneral.RowCommand
         Try
             Dim Index As Integer
 
@@ -129,7 +129,7 @@
         End Try
     End Sub
     'Cambia pagina
-    Private Sub dtggeneral_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
+    Protected Sub dtggeneral_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
         Try
             dtggeneral.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             dtggeneral.DataSource = Session("dtggeneral_Calidad_Registro_v4")

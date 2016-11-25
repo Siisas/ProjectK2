@@ -57,7 +57,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub busca()
+    Protected Sub busca()
         Try
             Dim objdatos As New clscrmdatos
             objdatos.idusuario = drlusuario.SelectedItem.Value

@@ -82,38 +82,38 @@
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''' Campaña MTI Chile ''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Cod_Bandeja_MTI As Int64
-    Private _Empresa As String
-    Private _Nombre As String
-    Private _Apellido As String
-    Private _Cargo As String
-    Private _Correo As String
-    Private _Telefono As String
-    Private _Celular As Int64
-    Private _Asiste As String
-    Private _Contacto_CLO As String
-    Private _Envio_Invitacion As String
-    Private _Realizo_llamada As String
-    Private _Contacto_Adicional As String
-    Private _Comentario As String
-    Private _Estado_Llamada As String
-    Private _Fc_Programado As String
-    Private _Validacion As String
-    Private _Recepcion_Invitacion As String
-    Private _Persona_Interesada As String
+    Protected _Cod_Bandeja_MTI As Int64
+    Protected _Empresa As String
+    Protected _Nombre As String
+    Protected _Apellido As String
+    Protected _Cargo As String
+    Protected _Correo As String
+    Protected _Telefono As String
+    Protected _Celular As Int64
+    Protected _Asiste As String
+    Protected _Contacto_CLO As String
+    Protected _Envio_Invitacion As String
+    Protected _Realizo_llamada As String
+    Protected _Contacto_Adicional As String
+    Protected _Comentario As String
+    Protected _Estado_Llamada As String
+    Protected _Fc_Programado As String
+    Protected _Validacion As String
+    Protected _Recepcion_Invitacion As String
+    Protected _Persona_Interesada As String
 
-    Private _Nombre1 As String
-    Private _Cargo1 As String
-    Private _Correo1 As String
-    Private _Telefono1 As String
-    Private _Nombre2 As String
-    Private _Cargo2 As String
-    Private _Correo2 As String
-    Private _Telefono2 As String
-    Private _Nombre3 As String
-    Private _Cargo3 As String
-    Private _Correo3 As String
-    Private _Telefono3 As String
+    Protected _Nombre1 As String
+    Protected _Cargo1 As String
+    Protected _Correo1 As String
+    Protected _Telefono1 As String
+    Protected _Nombre2 As String
+    Protected _Cargo2 As String
+    Protected _Correo2 As String
+    Protected _Telefono2 As String
+    Protected _Nombre3 As String
+    Protected _Cargo3 As String
+    Protected _Correo3 As String
+    Protected _Telefono3 As String
     Protected strlSuperv As String
     Protected strlNum_Intento As String
     Protected _Tipo_PQR As String
@@ -1658,7 +1658,7 @@
         End Set
     End Property
 
-    Private _N_Doc_Id As String
+    Protected _N_Doc_Id As String
     Public Property N_Doc_Id As String
         Get
             Return _N_Doc_Id

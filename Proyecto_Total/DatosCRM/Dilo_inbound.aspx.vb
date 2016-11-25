@@ -81,7 +81,7 @@
         End Try
     End Sub
     'Limpiar herramientas
-    Private Sub limpiar_herramientas()
+    Protected Sub limpiar_herramientas()
         Try
             txt_IDAVAYA.Text = ""
             txt_nombre.Text = ""
@@ -114,7 +114,7 @@
         End Try
     End Sub
     'CREAR
-    Private Sub Btn_caso_nuevo_Click(sender As Object, e As EventArgs) Handles Btn_caso_nuevo.Click
+    Protected Sub Btn_caso_nuevo_Click(sender As Object, e As EventArgs) Handles Btn_caso_nuevo.Click
         Try
             Panel_seguimiento.Visible = True
             Session("PermiteGuardar") = "True"
@@ -128,7 +128,7 @@
     End Sub
 
     'Buscar
-    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
+    Protected Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
         Try
             If txtcaso.Text = "" Then
                 Panel_consulta.Visible = False
@@ -165,7 +165,7 @@
         End Try
     End Sub
 
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
+    Protected Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         Try
             Dim objdatos As New clscrmdatos
             Dim caso As String
@@ -437,7 +437,7 @@
         End Try
     End Sub
     'drl departamento
-    Private Sub drldpto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles drldpto.SelectedIndexChanged
+    Protected Sub drldpto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles drldpto.SelectedIndexChanged
         Try
             Dim ObjGeneral As New clsgeneral
             'divipola - dpto
@@ -479,7 +479,7 @@
         End Try
     End Sub
     'chk falla sgsc
-    Private Sub CHKSD_CheckedChanged(sender As Object, e As EventArgs) Handles CHKSD.CheckedChanged
+    Protected Sub CHKSD_CheckedChanged(sender As Object, e As EventArgs) Handles CHKSD.CheckedChanged
         Try
             If CHKSD.Checked = True Then
                 txt_SD.Enabled = True

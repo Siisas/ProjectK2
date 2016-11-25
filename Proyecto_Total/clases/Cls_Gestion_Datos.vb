@@ -3,7 +3,7 @@ Imports System.Security.Cryptography
 Public Class Cls_Gestion_Datos
     'Variables de la clase
     'Variables de la clase
-    Private _Ex As Object
+    Protected _Ex As Object
     Public Property Ex As Object
         Get
             Return _Ex
@@ -12,7 +12,7 @@ Public Class Cls_Gestion_Datos
             _Ex = value
         End Set
     End Property
-    Private _DataSet As DataSet
+    Protected _DataSet As DataSet
     Public Property DataSet As DataSet
         Get
             Return _DataSet
@@ -21,7 +21,7 @@ Public Class Cls_Gestion_Datos
             _DataSet = value
         End Set
     End Property
-    Private _Grid_Config As String
+    Protected _Grid_Config As String
     Public Property Grid_Config As String
         Get
             Return _Grid_Config
@@ -30,7 +30,7 @@ Public Class Cls_Gestion_Datos
             _Grid_Config = value
         End Set
     End Property
-    Private _SubGrid_Config As String
+    Protected _SubGrid_Config As String
     Public Property SubGrid_Config As String
         Get
             Return _SubGrid_Config
@@ -39,7 +39,7 @@ Public Class Cls_Gestion_Datos
             _SubGrid_Config = value
         End Set
     End Property
-    Private _Grid_Keys As String
+    Protected _Grid_Keys As String
     Public Property Grid_Keys As String
         Get
             Return _Grid_Keys
@@ -48,7 +48,7 @@ Public Class Cls_Gestion_Datos
             _Grid_Keys = value
         End Set
     End Property
-    Private _SubGrid_Keys As String
+    Protected _SubGrid_Keys As String
     Public Property SubGrid_Keys As String
         Get
             Return _SubGrid_Keys
@@ -57,7 +57,7 @@ Public Class Cls_Gestion_Datos
             _SubGrid_Keys = value
         End Set
     End Property
-    Private _Grid_Datafields As String
+    Protected _Grid_Datafields As String
     Public Property Grid_Datafields As String
         Get
             Return _Grid_Datafields
@@ -66,7 +66,7 @@ Public Class Cls_Gestion_Datos
             _Grid_Datafields = value
         End Set
     End Property
-    Private _SubGrid_Datafields As String
+    Protected _SubGrid_Datafields As String
     Public Property SubGrid_Datafields As String
         Get
             Return _SubGrid_Datafields
@@ -75,7 +75,7 @@ Public Class Cls_Gestion_Datos
             _SubGrid_Datafields = value
         End Set
     End Property
-    Private _Grid_Columns As String
+    Protected _Grid_Columns As String
     Public Property Grid_Columns As String
         Get
             Return _Grid_Columns
@@ -84,7 +84,7 @@ Public Class Cls_Gestion_Datos
             _Grid_Columns = value
         End Set
     End Property
-    Private _SubGrid_Columns As String
+    Protected _SubGrid_Columns As String
     Public Property SubGrid_Columns As String
         Get
             Return _SubGrid_Columns

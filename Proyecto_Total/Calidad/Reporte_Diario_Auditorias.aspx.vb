@@ -21,7 +21,7 @@ Public Class Reporte_Diario_Auditorias
         End Try
     End Sub
 
-    Private Sub cargar_drl()
+    Protected Sub cargar_drl()
         Try
             'Campaña
             ObjCalidad.Validacion = "1"
@@ -44,7 +44,7 @@ Public Class Reporte_Diario_Auditorias
         End Try
     End Sub
 
-    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
+    Protected Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
         Try
             If txt_cod_agente.Text <> "" Or Drl_Supervisor.SelectedIndex <> 0 Or drl_campaña.SelectedIndex <> 0 Or Txt_Fc_Ini.Text <> "" Or Txt_Fc_Fin.Text <> "" Then
                 'CODIGO
@@ -126,7 +126,7 @@ Public Class Reporte_Diario_Auditorias
         End Try
     End Sub
 
-    Private Sub btn_exportar_Click(sender As Object, e As EventArgs) Handles btn_exportar.Click
+    Protected Sub btn_exportar_Click(sender As Object, e As EventArgs) Handles btn_exportar.Click
         Try
             dtggeneral.PageSize = 20000
             dtggeneral.DataSource = Session("Reporte_Diario_Auditorias")
@@ -171,7 +171,7 @@ Public Class Reporte_Diario_Auditorias
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span> " & ex.Message
         End Try
     End Sub
-    Private Sub dtggeneral_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
+    Protected Sub dtggeneral_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
         Try
             dtggeneral.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             dtggeneral.DataSource = Session("Reporte_Diario_Auditorias")

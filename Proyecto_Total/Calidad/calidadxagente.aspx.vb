@@ -30,7 +30,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub buscarinf()
+    Protected Sub buscarinf()
         Try
             Dim objdatos As New clscalidad
             objdatos.agente = lblusuario.Text
@@ -67,7 +67,7 @@
         End Try
     End Sub
 
-    Private Sub dtggeneral_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
+    Protected Sub dtggeneral_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
         Try
             dtggeneral.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             buscarinf()

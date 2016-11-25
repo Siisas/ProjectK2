@@ -10,29 +10,29 @@
     ''''''''''''''''''''''''''''''''''' Help Desk Registro '''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-    Private _Cod_HelpDesk_Registro As Integer
-    Private _Fecha_Registro As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Id_Usuario As String
-    Private _Observacion As String
-    Private _Prioridad As String
-    Private _Tema As String
-    Private _Estado As String
-    Private _Fecha_Inicio As String
-    Private _Fecha_Fin As String
-    Private _Cantidad As Integer
-    Private _Modulo As String
-    Private _Fk_Cod_Canal As Integer
-    Private _Fk_Cod_Categoria As Integer
-    Private _Fk_Cod_Tipo As Integer
-    Private _Persona_Reporta As String
-    Private _Asignado As String
-    Private _Asigna As String
-    Private _ObservacionAsigna As String
-    Private _Fk_Cod_Complemento_Area As Integer
-    Private _Fk_Complejidad As Integer
-    Private _Fk_Operatividad As Integer
-    Private _Validacion As Integer
-    Private _reiteracion As Integer
+    Protected _Cod_HelpDesk_Registro As Integer
+    Protected _Fecha_Registro As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Id_Usuario As String
+    Protected _Observacion As String
+    Protected _Prioridad As String
+    Protected _Tema As String
+    Protected _Estado As String
+    Protected _Fecha_Inicio As String
+    Protected _Fecha_Fin As String
+    Protected _Cantidad As Integer
+    Protected _Modulo As String
+    Protected _Fk_Cod_Canal As Integer
+    Protected _Fk_Cod_Categoria As Integer
+    Protected _Fk_Cod_Tipo As Integer
+    Protected _Persona_Reporta As String
+    Protected _Asignado As String
+    Protected _Asigna As String
+    Protected _ObservacionAsigna As String
+    Protected _Fk_Cod_Complemento_Area As Integer
+    Protected _Fk_Complejidad As Integer
+    Protected _Fk_Operatividad As Integer
+    Protected _Validacion As Integer
+    Protected _reiteracion As Integer
 
     Public Property reiteracion As Integer
         Get
@@ -46,7 +46,7 @@
 
 
     '############ © Gerson Brain Sanchez ##############
-    Private _Cod_Ticket As String
+    Protected _Cod_Ticket As String
     Public Property Cod_Ticket As String
         Get
             Return _Cod_Ticket
@@ -55,7 +55,7 @@
             _Cod_Ticket = value
         End Set
     End Property
-    Private _Descripcion As String
+    Protected _Descripcion As String
     Public Property Descripcion As String
         Get
             Return _Descripcion
@@ -64,7 +64,7 @@
             _Descripcion = value
         End Set
     End Property
-    Private _Cod_Calificacion As String
+    Protected _Cod_Calificacion As String
     Public Property Cod_Calificacion As Integer
         Get
             Return _Cod_Calificacion
@@ -73,7 +73,7 @@
             _Cod_Calificacion = value
         End Set
     End Property
-    Private _Cod_Estado As Integer
+    Protected _Cod_Estado As Integer
     Public Property Cod_Estado As Integer
         Get
             Return _Cod_Estado
@@ -452,7 +452,7 @@
     '''''''''''''''''''''''''''''''''' Help Desk Asignacion ''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-    Private _Fecha_Asigna As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Fecha_Asigna As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
 
     Public Property Fecha_Asigna As String
         Get
@@ -684,13 +684,13 @@
     ''''''''''''''''''''''''''''''''''' Help Desk Solucion '''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-    Private _Cod_HelpDesk_Solucion As Integer
-    'Variable ya declarada en el Registro de Help desk 'Private _Fecha_Registro As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    'Variable ya declarada en el Registro de Help desk 'Private _Id_Usuario As String
-    'Variable ya declarada en el Registro de Help desk 'Private _Observacion As String
-    'Variable ya declarada en el Registro de Help desk 'Private _Estado As String
-    Private _Fk_Cod_HelpDesk_Registro As Integer
-    Private _Nombre As String
+    Protected _Cod_HelpDesk_Solucion As Integer
+    'Variable ya declarada en el Registro de Help desk 'Protected _Fecha_Registro As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    'Variable ya declarada en el Registro de Help desk 'Protected _Id_Usuario As String
+    'Variable ya declarada en el Registro de Help desk 'Protected _Observacion As String
+    'Variable ya declarada en el Registro de Help desk 'Protected _Estado As String
+    Protected _Fk_Cod_HelpDesk_Registro As Integer
+    Protected _Nombre As String
 
     Public Property Nombre As String
         Get

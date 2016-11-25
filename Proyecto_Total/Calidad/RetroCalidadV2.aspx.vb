@@ -187,7 +187,7 @@ Public Class RetroCalidadV2
         End Try
     End Sub
 
-    Private Sub BtnConsultar_Click(sender As Object, e As EventArgs) Handles BtnConsultar.Click
+    Protected Sub BtnConsultar_Click(sender As Object, e As EventArgs) Handles BtnConsultar.Click
         Try
             ObjValidacion.Validar_Herramientas(txtcodbus, "codigo retroalimentacion")
             'Valida Version
@@ -393,7 +393,7 @@ Public Class RetroCalidadV2
         End Try
     End Sub
     'BTN buscar auditoria
-    Private Sub btnidaud_Click(sender As Object, e As EventArgs) Handles btnidaud.Click
+    Protected Sub btnidaud_Click(sender As Object, e As EventArgs) Handles btnidaud.Click
         Try
             Dim dts As DataSet
             ObjValidacion.Validar_Herramientas(txtidaud, "Id Auditoria")
@@ -463,7 +463,7 @@ Public Class RetroCalidadV2
         End Try
     End Sub
 
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
+    Protected Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         Try
             If lblidaud.Text = "" Then
                 mostrar_Mensaje("Para guardar Retroalimentación debe realizar la búsqueda de un ID", 2)
@@ -571,7 +571,7 @@ Public Class RetroCalidadV2
         End Try
     End Sub
 
-    Private Sub BtnConsultaRetros_Click(sender As Object, e As EventArgs) Handles BtnConsultaRetros.Click
+    Protected Sub BtnConsultaRetros_Click(sender As Object, e As EventArgs) Handles BtnConsultaRetros.Click
         Try
             ObjValidacion.Validar_Herramientas(TxtFechaInicio, "Hora inicio")
             ObjValidacion.Validar_Herramientas(TxtFechaFin, "Hora fin")
@@ -663,7 +663,7 @@ Public Class RetroCalidadV2
         End Try
     End Sub
 
-    Private Sub dtgConsultas_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtgConsultas.PageIndexChanging
+    Protected Sub dtgConsultas_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtgConsultas.PageIndexChanging
         Try
             dtgConsultas.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             dtgConsultas.DataSource = Session("dtggeneral_RetroCalidadV2")
@@ -675,7 +675,7 @@ Public Class RetroCalidadV2
         End Try
     End Sub
 
-    Private Sub dtgConsultas_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles dtgConsultas.RowCommand
+    Protected Sub dtgConsultas_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles dtgConsultas.RowCommand
         Try
             Dim Index As Integer
 

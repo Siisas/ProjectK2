@@ -3,42 +3,42 @@
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''' Aspirantes ''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Cod_Aspirante As Int64
-    Private _Fecha_Actual As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Id_Usuario As String
-    Private _Fecha_Filtro As String
-    Private _Fecha_Entrevista As String
-    Private _AM_PM As String
-    Private _FK_Cod_Empresa As Integer
-    Private _Id_Aspirante As Int64
-    Private _Nombre_Aspirante As String
-    Private _Apellido As String
-    Private _Telefono1 As String
-    Private _Telefono2 As String
-    Private _Celular1 As String
-    Private _Celular2 As String
-    Private _Fk_Cod_Perfil_PS As Integer
-    Private _Fk_Cod_Cargo_Aspira As Integer
-    Private _Estado As String
-    Private _Estudia As String
-    Private _Experiencia As String
-    Private _Carrera As String
-    Private _Fk_Cod_Medio_Difucion As Integer
-    Private _Convocado As String
-    Private _Asiste_Entrevista As String
-    Private _Promedio_Entrevista As String
-    Private _Promedio_Optimo As String
-    Private _Promedio_Digitacion As String
-    Private _Promedio_C_Lectura As String
-    Private _Promedio_Ortografia As String
-    Private _Test_Wartegg As String
-    Private _PF_16 As String
-    Private _Assessment_Center As String
-    Private _Diligencias As String
-    Private _Resultado_General As String
-    Private _Preseleccionado As String
-    Private _Cantidad As Integer
-    Private _Id_Aspirante_Update As Int64
+    Protected _Cod_Aspirante As Int64
+    Protected _Fecha_Actual As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Id_Usuario As String
+    Protected _Fecha_Filtro As String
+    Protected _Fecha_Entrevista As String
+    Protected _AM_PM As String
+    Protected _FK_Cod_Empresa As Integer
+    Protected _Id_Aspirante As Int64
+    Protected _Nombre_Aspirante As String
+    Protected _Apellido As String
+    Protected _Telefono1 As String
+    Protected _Telefono2 As String
+    Protected _Celular1 As String
+    Protected _Celular2 As String
+    Protected _Fk_Cod_Perfil_PS As Integer
+    Protected _Fk_Cod_Cargo_Aspira As Integer
+    Protected _Estado As String
+    Protected _Estudia As String
+    Protected _Experiencia As String
+    Protected _Carrera As String
+    Protected _Fk_Cod_Medio_Difucion As Integer
+    Protected _Convocado As String
+    Protected _Asiste_Entrevista As String
+    Protected _Promedio_Entrevista As String
+    Protected _Promedio_Optimo As String
+    Protected _Promedio_Digitacion As String
+    Protected _Promedio_C_Lectura As String
+    Protected _Promedio_Ortografia As String
+    Protected _Test_Wartegg As String
+    Protected _PF_16 As String
+    Protected _Assessment_Center As String
+    Protected _Diligencias As String
+    Protected _Resultado_General As String
+    Protected _Preseleccionado As String
+    Protected _Cantidad As Integer
+    Protected _Id_Aspirante_Update As Int64
 
     Public Property Id_Aspirante_Update As Int64
         Get

@@ -115,7 +115,7 @@ Public Class clscrmdatos
     Protected _Tipo_Proceso_Linea As String
     Protected strlcustcode As String
     Protected strlusuarioreporta As String
-    Private _Tipo_Falla As String
+    Protected _Tipo_Falla As String
     Protected _Percep_serv As String
     Protected _inconsistencia_encuesta As String
     Protected _Linea_CMC As String
@@ -6674,15 +6674,15 @@ Public Class clscrmdatos
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''' VARIABLES DE MEDICION - BIENVENIDA ''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Des_Caracteristica_Plan As String
-    Private _Canal_Consulta_Control_Consumo As String
-    Private _Asesoria_Reg_Tienda_Des_App As String
-    Private _Config_Cuenta_Correo As String
-    Private _Caracte_Basica_Equipo As String
-    Private _Condiciones_Cobertura_Red As String
-    Private _Tips_Auto_Atencion As String
-    Private _Info_Roaming_Internacional As String
-    Private _Remision_Canal_Atencion As String
+    Protected _Des_Caracteristica_Plan As String
+    Protected _Canal_Consulta_Control_Consumo As String
+    Protected _Asesoria_Reg_Tienda_Des_App As String
+    Protected _Config_Cuenta_Correo As String
+    Protected _Caracte_Basica_Equipo As String
+    Protected _Condiciones_Cobertura_Red As String
+    Protected _Tips_Auto_Atencion As String
+    Protected _Info_Roaming_Internacional As String
+    Protected _Remision_Canal_Atencion As String
 
     Public Property Remision_Canal_Atencion As String
         Get

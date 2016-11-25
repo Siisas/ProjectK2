@@ -23,7 +23,7 @@ Public Class Seguimiento_Retro
         End Try
     End Sub
 
-    Private Sub Cargar_Drl()
+    Protected Sub Cargar_Drl()
         Try
             'ingenieros
             With Drl_ing
@@ -64,7 +64,7 @@ Public Class Seguimiento_Retro
         End Try
     End Sub
 
-    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
+    Protected Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
         Try
             If Drl_auditor.SelectedIndex = 0 And Drl_ing.SelectedIndex = 0 And drl_campaña.SelectedIndex = 0 And drl_estado.SelectedIndex = 0 And drl_criticidad.SelectedIndex = 0 And Txt_Fc_Ini.Text = "" And Txt_Fc_Fin.Text = "" Then
                 Pnl_Message.CssClass = "alert alert-warning"
@@ -124,7 +124,7 @@ Public Class Seguimiento_Retro
         End Try
     End Sub
 
-    Private Sub dtggeneral_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
+    Protected Sub dtggeneral_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
         Try
             dtggeneral.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             dtggeneral.DataSource = Session("dtggeneral_Seguimiento_retro")
@@ -135,7 +135,7 @@ Public Class Seguimiento_Retro
         End Try
     End Sub
 
-    Private Sub dtggeneral_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles dtggeneral.RowDataBound
+    Protected Sub dtggeneral_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles dtggeneral.RowDataBound
         Try
             If (e.Row.RowType = DataControlRowType.DataRow) Then
                 Dim Caducado As String = e.Row.Cells(11).Text
@@ -177,7 +177,7 @@ Public Class Seguimiento_Retro
         End If
     End Sub
 
-    Private Sub btn_exportar_Click(sender As Object, e As EventArgs) Handles btn_exportar.Click
+    Protected Sub btn_exportar_Click(sender As Object, e As EventArgs) Handles btn_exportar.Click
         Try
             dtggeneral2.Visible = True
             dtggeneral2.PageSize = 10000
@@ -195,7 +195,7 @@ Public Class Seguimiento_Retro
     End Sub
 
 
-    Private Sub dtggeneral_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles dtggeneral.RowCommand
+    Protected Sub dtggeneral_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles dtggeneral.RowCommand
         Try
             Dim Index As Integer
             lbl_fc_aud.Text = ""
@@ -246,7 +246,7 @@ Public Class Seguimiento_Retro
         End Try
     End Sub
 
-    Private Sub btn_cancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
+    Protected Sub btn_cancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
         Try
             ScriptManager.RegisterStartupScript(Page, GetType(Page), "Plegar", "PlegDes_Dinamico('#Rechazados', 'slide', '', '', '');", True)
         Catch ex As Exception
@@ -256,7 +256,7 @@ Public Class Seguimiento_Retro
         End Try
     End Sub
 
-    Private Sub Btn_rechaza_Click(sender As Object, e As EventArgs) Handles Btn_rechaza.Click
+    Protected Sub Btn_rechaza_Click(sender As Object, e As EventArgs) Handles Btn_rechaza.Click
         Try
             If drl_tipo_recha.SelectedIndex = 0 Then
                 Pnl_mensaje.CssClass = "alert alert-warning"

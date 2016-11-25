@@ -1,130 +1,130 @@
 ﻿Public Class clsCafeteriaProductos
-    Private _idProducto As Integer
-    Private _nombreProducto As String
-    Private _idCategoria As Integer
-    Private _categoria As String
-    Private _cantidadProducto As Integer
-    Private _valorProducto As Integer
-    Private _fechaRegistroProducto As Date
-    Private _codigoCliente As Integer
-    Private _codigoEmpleado As Integer
-    Private _nombreCliente As String
-    Private _nombreEmpleado As String
+    Protected idProducto As Integer
+    Protected nombreProducto As String
+    Protected idCategoria As Integer
+    Protected categoria As String
+    Protected cantidadProducto As Integer
+    Protected valorProducto As Integer
+    Protected fechaRegistroProducto As Date
+    Protected codigoCliente As Integer
+    Protected codigoEmpleado As Integer
+    Protected nombreCliente As String
+    Protected nombreEmpleado As String
 
-    Protected Property IdProducto As Integer
+
+
+    Public Property PublicidProducto As Integer
         Get
-            Return _idProducto
+            Return idProducto
         End Get
         Set(value As Integer)
-            _idProducto = value
+            idProducto = value
         End Set
     End Property
 
-    Protected Property NombreProducto As String
+    Public Property PublicNombreProducto As String
         Get
-            Return _nombreProducto
+            Return nombreProducto
         End Get
         Set(value As String)
-            _nombreProducto = value
+            nombreProducto = value
         End Set
     End Property
 
-    Protected Property IdCategoria As Integer
+    Public Property PublicIdCategoria As Integer
         Get
-            Return _idCategoria
+            Return idCategoria
         End Get
         Set(value As Integer)
-            _idCategoria = value
+            idCategoria = value
         End Set
     End Property
 
-    Protected Property Categoria As String
+    Public Property PublicCategoria As String
         Get
-            Return _categoria
+            Return categoria
         End Get
         Set(value As String)
-            _categoria = value
+            categoria = value
         End Set
     End Property
 
-    Protected Property CantidadProducto As Integer
+    Public Property PublicCantidadProducto As Integer
         Get
-            Return _cantidadProducto
+            Return cantidadProducto
         End Get
         Set(value As Integer)
-            _cantidadProducto = value
+            cantidadProducto = value
         End Set
     End Property
 
-    Protected Property ValorProducto As Integer
+    Public Property PublicValorProducto As Integer
         Get
-            Return _valorProducto
+            Return valorProducto
         End Get
         Set(value As Integer)
-            _valorProducto = value
+            valorProducto = value
         End Set
     End Property
 
-    Protected Property FechaRegistroProducto As Date
+    Public Property PublicFechaRegistroProducto As Date
         Get
-            Return _fechaRegistroProducto
+            Return fechaRegistroProducto
         End Get
         Set(value As Date)
-            _fechaRegistroProducto = value
+            fechaRegistroProducto = value
         End Set
     End Property
 
-    Protected Property CodigoCliente As Integer
+    Public Property PublicCodigoCliente As Integer
         Get
-            Return _codigoCliente
+            Return codigoCliente
         End Get
         Set(value As Integer)
-            _codigoCliente = value
+            codigoCliente = value
         End Set
     End Property
 
-    Protected Property CodigoEmpleado As Integer
+    Public Property PublicCodigoEmpleado As Integer
         Get
-            Return _codigoEmpleado
+            Return codigoEmpleado
         End Get
         Set(value As Integer)
-            _codigoEmpleado = value
+            codigoEmpleado = value
         End Set
     End Property
 
-    Protected Property NombreCliente As String
+    Public Property PublicNombreCliente As String
         Get
-            Return _nombreCliente
+            Return nombreCliente
         End Get
         Set(value As String)
-            _nombreCliente = value
+            nombreCliente = value
         End Set
     End Property
 
-    Protected Property NombreEmpleado As String
+    Public Property PublicNombreEmpleado As String
         Get
-            Return _nombreEmpleado
+            Return nombreEmpleado
         End Get
         Set(value As String)
-            _nombreEmpleado = value
+            nombreEmpleado = value
         End Set
     End Property
 
     'empiezo a hacer conexion con la base de datos para insertar datos 
     'utilizo stored procedured y una propiedad como parametro que recibe
-    Public Function RegEmpleadosCafeteria() As DataSet
-        Dim Ingreso As New DataSet
+    Public Sub RegEmpleadosCafeteria()
 
         Dim cn As New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexion2").ConnectionString) ' Conexion con la base 
         Try
-            Dim cms As New SqlClient.SqlCommand
+            Dim cms As New SqlClient.SqlCommand("SpRegistrarEmpleado")
             cn.Open()
-            cms.CommandType = "SpRegistrarEmpleado"
-            cms.CommandText = "Execute SpRegistrarEmpleado,@NombreEmpleado"
-            cms.Parameters.AddWithValue("@NombreEmpleado", _nombreEmpleado)
+            cms.CommandType = CommandType.StoredProcedure
+            cms.Parameters.AddWithValue("@NombreEmpleado", nombreEmpleado)
             cms.Connection = cn
             cms.ExecuteNonQuery()
-            Return Ingreso
+
         Catch ex As Exception
             Throw ex
         Finally
@@ -132,6 +132,8 @@
                 cn.Close()
             End If
         End Try
-    End Function
+    End Sub
+
+    Public 
 
 End Class

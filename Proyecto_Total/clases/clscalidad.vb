@@ -28,122 +28,122 @@
     '''''''''''''''''''''''''''''''''' Calidad V2 ''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-    Private _Cod_Calidad_Registro As Int64
-    Private _Fc_Reg As Date = Now
-    Private _Id_Usuario As String
-    Private _Id_Caso As Int64
-    'Private _Agente As String
-    Private _Auditor As String
-    Private _Campania As String
-    Private _Proceso As String
-    Private _Fc_Llamada As String
-    Private _Tiempo_Acum_Llamada As String
-    Private _N_Llamadas_Min As Integer
-    Private _Estado_Caso As String
-    Private _Tipo_Auditoria As String
-    Private _Amabilidad_Empatia As Integer
-    Private _Colgada_Llamada As Integer
-    Private _Real_filtros_adecuados As Integer
-    Private _Corona_Abierta As Integer
-    Private _Documentacion As Integer
-    Private _Procedimiento_PQR As Integer
-    Private _Procedimiento_prueba_tramite_incompleto_incorrecto As Integer
-    Private _Presenta_objetivo_llamada As Integer
-    Private _Cordialidad_Comunicacion As Integer
-    Private _Claridad_transmitir_informacion As Integer
-    Private _Seguridad As Integer
-    Private _Util_guion_saludo As Integer
-    Private _Gestion_Llamada As Integer
-    Private _Gestion_Soporte As Integer
-    Private _Gestion_Asignacion As Integer
-    Private _Gestion_Cierre As Integer
-    Private _Solucion As String
-    Private _Interes_escuchar As String
-    Private _Obs_General As String
-    Private _Reincide As String
-    Private _obs_Reincide As String
+    Protected _Cod_Calidad_Registro As Int64
+    Protected _Fc_Reg As Date = Now
+    Protected _Id_Usuario As String
+    Protected _Id_Caso As Int64
+    'Protected _Agente As String
+    Protected _Auditor As String
+    Protected _Campania As String
+    Protected _Proceso As String
+    Protected _Fc_Llamada As String
+    Protected _Tiempo_Acum_Llamada As String
+    Protected _N_Llamadas_Min As Integer
+    Protected _Estado_Caso As String
+    Protected _Tipo_Auditoria As String
+    Protected _Amabilidad_Empatia As Integer
+    Protected _Colgada_Llamada As Integer
+    Protected _Real_filtros_adecuados As Integer
+    Protected _Corona_Abierta As Integer
+    Protected _Documentacion As Integer
+    Protected _Procedimiento_PQR As Integer
+    Protected _Procedimiento_prueba_tramite_incompleto_incorrecto As Integer
+    Protected _Presenta_objetivo_llamada As Integer
+    Protected _Cordialidad_Comunicacion As Integer
+    Protected _Claridad_transmitir_informacion As Integer
+    Protected _Seguridad As Integer
+    Protected _Util_guion_saludo As Integer
+    Protected _Gestion_Llamada As Integer
+    Protected _Gestion_Soporte As Integer
+    Protected _Gestion_Asignacion As Integer
+    Protected _Gestion_Cierre As Integer
+    Protected _Solucion As String
+    Protected _Interes_escuchar As String
+    Protected _Obs_General As String
+    Protected _Reincide As String
+    Protected _obs_Reincide As String
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''' Calibracion '''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     'CalibracionSesion
-    Private _Cod_CalibracionSesion As Integer
-    Private _Fc_Creacion As String
-    Private _Fc_Cierre As String
-    Private _Administrador As String
+    Protected _Cod_CalibracionSesion As Integer
+    Protected _Fc_Creacion As String
+    Protected _Fc_Cierre As String
+    Protected _Administrador As String
     'CalibracionSesionCaso
-    Private _Cod_CalibracionSesionCaso As Integer
-    Private _Nombre As String
+    Protected _Cod_CalibracionSesionCaso As Integer
+    Protected _Nombre As String
     'CalibracionSesionIncluido
-    Private _Cod_CalibracionSesionIncluido As Integer
-    Private _Respuesta As String
+    Protected _Cod_CalibracionSesionIncluido As Integer
+    Protected _Respuesta As String
     'CalibracionSesionInvita
-    Private _Cod_CalibracionSesionInvita As Integer
-    Private _Invita As String
-    Private _Invitado As String
-    Private _Fk_Cod_CalibracionSesion As Integer
+    Protected _Cod_CalibracionSesionInvita As Integer
+    Protected _Invita As String
+    Protected _Invitado As String
+    Protected _Fk_Cod_CalibracionSesion As Integer
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''' Calidad Directv''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _tipo_llamada As String
-    Private _tipificacion As String
-    Private _Documentación_toma_datos As Integer
-    Private _Obs_Documentación_toma_datos As String
-    Private _Brindar_información_errada_cerrar_venta As Integer
-    Private _obs_Brindar_información_errada_cerrar_venta As String
-    Private _Inicia_llamada_horario_saludo_identidad_motivo_llamada As String
-    Private _obs_Inicia_llamada_horario_saludo_identidad_motivo_llamada As String
-    Private _Realiza_preguntas_concretas_perfilar_cliente As String
-    Private _obs_Realiza_preguntas_concretas_perfilar_cliente As String
-    Private _Uso_información As String
-    Private _obs_Uso_información As String
-    Private _Tiene_conocimiento_completo_producto As String
-    Private _obs_Tiene_conocimiento_completo_producto As String
-    Private _Indica_beneficios_producto As String
-    Private _obs_Indica_beneficios_producto As String
-    Private _Aclara_dudas_tiene_cliente_acerca_servicio As String
-    Private _obs_Aclara_dudas_tiene_cliente_acerca_servicio As String
-    Private _Realiza_precierre_ofrece_beneficio_producto As String
-    Private _obs_Realiza_precierre_ofrece_beneficio_producto As String
-    Private _Cierra_venta_tiempo_oportuno As String
-    Private _obs_Cierra_venta_tiempo_oportuno As String
-    Private _Informacion_cierre As String
-    Private _obs_Informacion_cierre As String
-    Private _Rebate_minimo_objecione_negativa_cliente As String
-    Private _obs_Rebate_minimo_objecione_negativa_cliente As String
-    Private _manejo_objeciones_coherente As String
-    Private _obs_manejo_objeciones_coherente As String
-    Private _Retoma_llamada_tiempos_establecidos As String
-    Private _obs_Retoma_llamada_tiempos_establecidos As String
-    Private _evidencia_ambiente_laboral As String
-    Private _obs_evidencia_ambiente_laboral As String
-    Private _Tono_Voz As String
-    Private _obs_Tono_voz_Fluidez_verbal As String
-    Private _Personaliza_llamada As String
-    Private _obs_Personaliza_llamada As String
-    Private _Habilidad_escucha As String
-    Private _obs_Habilidad_escucha As String
-    Private _Cordialidad_empatia As String
-    Private _obs_Cordialidad_empatia As String
-    Private _Tipifica_apropiadamente_gestió_llamada_aplicativos As String
-    Private _obs_Tipifica_apropiadamente_gestió_llamada_aplicativos As String
-    Private _Cordialidad As String
-    Private _obs_Cordialidad As String
-    Private _Contacto_Activo As String
-    Private _Obs_Contacto_Activo As String
+    Protected _tipo_llamada As String
+    Protected _tipificacion As String
+    Protected _Documentación_toma_datos As Integer
+    Protected _Obs_Documentación_toma_datos As String
+    Protected _Brindar_información_errada_cerrar_venta As Integer
+    Protected _obs_Brindar_información_errada_cerrar_venta As String
+    Protected _Inicia_llamada_horario_saludo_identidad_motivo_llamada As String
+    Protected _obs_Inicia_llamada_horario_saludo_identidad_motivo_llamada As String
+    Protected _Realiza_preguntas_concretas_perfilar_cliente As String
+    Protected _obs_Realiza_preguntas_concretas_perfilar_cliente As String
+    Protected _Uso_información As String
+    Protected _obs_Uso_información As String
+    Protected _Tiene_conocimiento_completo_producto As String
+    Protected _obs_Tiene_conocimiento_completo_producto As String
+    Protected _Indica_beneficios_producto As String
+    Protected _obs_Indica_beneficios_producto As String
+    Protected _Aclara_dudas_tiene_cliente_acerca_servicio As String
+    Protected _obs_Aclara_dudas_tiene_cliente_acerca_servicio As String
+    Protected _Realiza_precierre_ofrece_beneficio_producto As String
+    Protected _obs_Realiza_precierre_ofrece_beneficio_producto As String
+    Protected _Cierra_venta_tiempo_oportuno As String
+    Protected _obs_Cierra_venta_tiempo_oportuno As String
+    Protected _Informacion_cierre As String
+    Protected _obs_Informacion_cierre As String
+    Protected _Rebate_minimo_objecione_negativa_cliente As String
+    Protected _obs_Rebate_minimo_objecione_negativa_cliente As String
+    Protected _manejo_objeciones_coherente As String
+    Protected _obs_manejo_objeciones_coherente As String
+    Protected _Retoma_llamada_tiempos_establecidos As String
+    Protected _obs_Retoma_llamada_tiempos_establecidos As String
+    Protected _evidencia_ambiente_laboral As String
+    Protected _obs_evidencia_ambiente_laboral As String
+    Protected _Tono_Voz As String
+    Protected _obs_Tono_voz_Fluidez_verbal As String
+    Protected _Personaliza_llamada As String
+    Protected _obs_Personaliza_llamada As String
+    Protected _Habilidad_escucha As String
+    Protected _obs_Habilidad_escucha As String
+    Protected _Cordialidad_empatia As String
+    Protected _obs_Cordialidad_empatia As String
+    Protected _Tipifica_apropiadamente_gestió_llamada_aplicativos As String
+    Protected _obs_Tipifica_apropiadamente_gestió_llamada_aplicativos As String
+    Protected _Cordialidad As String
+    Protected _obs_Cordialidad As String
+    Protected _Contacto_Activo As String
+    Protected _Obs_Contacto_Activo As String
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''' Segundo Concepto '''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Codigo_reg As Integer
-    Private _Auditoria As Integer
-    Private _razon As String
-    Private _asistio As String
-    Private _Observacion As String
-    Private _Estado As String
-    Private _Fc_Asignacion As String
-    Private _Fc_Respuesta As String
-    Private _Observacion_Auditor As String
-    Private _Reporta_Inc As String
+    Protected _Codigo_reg As Integer
+    Protected _Auditoria As Integer
+    Protected _razon As String
+    Protected _asistio As String
+    Protected _Observacion As String
+    Protected _Estado As String
+    Protected _Fc_Asignacion As String
+    Protected _Fc_Respuesta As String
+    Protected _Observacion_Auditor As String
+    Protected _Reporta_Inc As String
     Public Property Reporta_Inc As String
         Get
             Return _Reporta_Inc
@@ -972,28 +972,28 @@
     ''''''''''''''' Variables Obs '''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''
 
-    Private _Obs_Amabilidad_Empatia As String
-    Private _Obs_Colgada_Llamada As String
-    Private _Obs_Real_filtros_adecuados As String
-    Private _Obs_Corona_Abierta As String
-    Private _Obs_Documentacion As String
-    Private _Obs_Procedimiento_PQR As String
-    Private _Obs_Procedimiento_prueba_tramite_incompleto_incorrecto As String
+    Protected _Obs_Amabilidad_Empatia As String
+    Protected _Obs_Colgada_Llamada As String
+    Protected _Obs_Real_filtros_adecuados As String
+    Protected _Obs_Corona_Abierta As String
+    Protected _Obs_Documentacion As String
+    Protected _Obs_Procedimiento_PQR As String
+    Protected _Obs_Procedimiento_prueba_tramite_incompleto_incorrecto As String
 
-    Private _Obs_Presenta_objetivo_llamada As String
-    Private _Obs_Cordialidad_Comunicacion As String
-    Private _Obs_Claridad_transmitir_informacion As String
-    Private _Obs_Seguridad As String
-    Private _Obs_Util_guion_saludo As String
+    Protected _Obs_Presenta_objetivo_llamada As String
+    Protected _Obs_Cordialidad_Comunicacion As String
+    Protected _Obs_Claridad_transmitir_informacion As String
+    Protected _Obs_Seguridad As String
+    Protected _Obs_Util_guion_saludo As String
 
-    Private _Obs_Gestion_Llamada As String
-    Private _Obs_Gestion_Soporte As String
-    Private _Obs_Gestion_Asignacion As String
-    Private _Obs_Gestion_Cierre As String
+    Protected _Obs_Gestion_Llamada As String
+    Protected _Obs_Gestion_Soporte As String
+    Protected _Obs_Gestion_Asignacion As String
+    Protected _Obs_Gestion_Cierre As String
 
-    Private _Obs_Solucion As String
-    Private _Obs_Interes_escuchar As String
-    Private _Validacion As String
+    Protected _Obs_Solucion As String
+    Protected _Obs_Interes_escuchar As String
+    Protected _Validacion As String
 
     Public Property Validacion As String
         Get
@@ -1341,7 +1341,7 @@
         End Set
     End Property
 
-    Private _Supervisor As String
+    Protected _Supervisor As String
     Public Property Supervisor As String
         Get
             Return _Supervisor
@@ -1351,7 +1351,7 @@
         End Set
     End Property
 
-    Private _Id_Tipo_Cliente As Integer
+    Protected _Id_Tipo_Cliente As Integer
     Public Property Id_Tipo_Cliente As Integer
         Get
             Return _Id_Tipo_Cliente
@@ -1360,7 +1360,7 @@
             _Id_Tipo_Cliente = value
         End Set
     End Property
-    Private _Id_Tipo_PQR As Integer
+    Protected _Id_Tipo_PQR As Integer
     Public Property Id_Tipo_PQR As Integer
         Get
             Return _Id_Tipo_PQR
@@ -1369,7 +1369,7 @@
             _Id_Tipo_PQR = value
         End Set
     End Property
-    Private _Tipo_Cliente As String
+    Protected _Tipo_Cliente As String
     Public Property Tipo_Cliente As String
         Get
             Return _Tipo_Cliente
@@ -1378,7 +1378,7 @@
             _Tipo_Cliente = value
         End Set
     End Property
-    Private _Tipo_PQR As String
+    Protected _Tipo_PQR As String
     Public Property Tipo_PQR As String
         Get
             Return _Tipo_PQR
@@ -4692,7 +4692,7 @@
     '-----------------------------------------------------------------------
     '--------------Calidad Registro Auditoria V4-----------------
     '-----------------------------------------------------------------------
-    Private _Disponibilidad_Atender_Llamada As String
+    Protected _Disponibilidad_Atender_Llamada As String
     Public Property Disponibilidad_Atender_Llamada As String
         Get
             Return _Disponibilidad_Atender_Llamada
@@ -4701,7 +4701,7 @@
             _Disponibilidad_Atender_Llamada = value
         End Set
     End Property
-    Private _Obs_disponibilidad_Atender_Llamada As String
+    Protected _Obs_disponibilidad_Atender_Llamada As String
     Public Property Obs_disponibilidad_Atender_Llamada As String
         Get
             Return _Obs_disponibilidad_Atender_Llamada
@@ -4711,7 +4711,7 @@
         End Set
     End Property
 
-    Private _Amabilidad_lenguaje_apropiado As String
+    Protected _Amabilidad_lenguaje_apropiado As String
     Public Property Amabilidad_lenguaje_apropiado As String
         Get
             Return _Amabilidad_lenguaje_apropiado
@@ -4720,7 +4720,7 @@
             _Amabilidad_lenguaje_apropiado = value
         End Set
     End Property
-    Private _Obs_Amabilidad_lenguaje_apropiado As String
+    Protected _Obs_Amabilidad_lenguaje_apropiado As String
     Public Property Obs_Amabilidad_lenguaje_apropiado As String
         Get
             Return _Obs_Amabilidad_lenguaje_apropiado
@@ -4730,7 +4730,7 @@
         End Set
     End Property
 
-    Private _Manejo_Tiempo As String
+    Protected _Manejo_Tiempo As String
     Public Property Manejo_Tiempo As String
         Get
             Return _Manejo_Tiempo
@@ -4739,7 +4739,7 @@
             _Manejo_Tiempo = value
         End Set
     End Property
-    Private _Obs_Manejo_Tiempo As String
+    Protected _Obs_Manejo_Tiempo As String
     Public Property Obs_Manejo_Tiempo As String
         Get
             Return _Obs_Manejo_Tiempo
@@ -4749,7 +4749,7 @@
         End Set
     End Property
 
-    Private _Concentracion_durante_llamada As String
+    Protected _Concentracion_durante_llamada As String
     Public Property Concentracion_durante_llamada As String
         Get
             Return _Concentracion_durante_llamada
@@ -4758,7 +4758,7 @@
             _Concentracion_durante_llamada = value
         End Set
     End Property
-    Private _Obs_Concentracion_durante_llamada As String
+    Protected _Obs_Concentracion_durante_llamada As String
     Public Property Obs_Concentracion_durante_llamada As String
         Get
             Return _Obs_Concentracion_durante_llamada
@@ -4769,7 +4769,7 @@
     End Property
 
 
-    Private _Procedimientos_conocimientos As String
+    Protected _Procedimientos_conocimientos As String
     Public Property Procedimientos_conocimientos As String
         Get
             Return _Procedimientos_conocimientos
@@ -4778,7 +4778,7 @@
             _Procedimientos_conocimientos = value
         End Set
     End Property
-    Private _Obs_Procedimientos_conocimientos As String
+    Protected _Obs_Procedimientos_conocimientos As String
     Public Property Obs_Procedimientos_conocimientos As String
         Get
             Return _Obs_Procedimientos_conocimientos
@@ -4788,7 +4788,7 @@
         End Set
     End Property
 
-    Private _Cuelgue_llamada As String
+    Protected _Cuelgue_llamada As String
     Public Property Cuelgue_llamada As String
         Get
             Return _Cuelgue_llamada
@@ -4797,7 +4797,7 @@
             _Cuelgue_llamada = value
         End Set
     End Property
-    Private _Obs_Cuelgue_llamada As String
+    Protected _Obs_Cuelgue_llamada As String
     Public Property Obs_Cuelgue_llamada As String
         Get
             Return _Obs_Cuelgue_llamada
@@ -4807,7 +4807,7 @@
         End Set
     End Property
 
-    Private _Finalizacion_despedida_llamada As String
+    Protected _Finalizacion_despedida_llamada As String
     Public Property Finalizacion_despedida_llamada As String
         Get
             Return _Finalizacion_despedida_llamada
@@ -4816,7 +4816,7 @@
             _Finalizacion_despedida_llamada = value
         End Set
     End Property
-    Private _Obs_Finalizacion_despedida_llamada As String
+    Protected _Obs_Finalizacion_despedida_llamada As String
     Public Property Obs_Finalizacion_despedida_llamada As String
         Get
             Return _Obs_Finalizacion_despedida_llamada

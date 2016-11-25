@@ -525,7 +525,7 @@ Public Class Formacion_Asignacion
         End Try
     End Sub
 
-    Private Sub Detalle()
+    Protected Sub Detalle()
         table.Columns.Add(New DataColumn("ID_Formacion", GetType(String)))
         table.Columns.Add(New DataColumn("Grupo", GetType(String)))
         table.Columns.Add(New DataColumn("Modulo", GetType(String)))
@@ -584,7 +584,7 @@ Public Class Formacion_Asignacion
   
 
 
-    Private Sub Dtg_Formador_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Formador.RowDataBound
+    Protected Sub Dtg_Formador_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Formador.RowDataBound
         Try
             If (e.Row.RowType = DataControlRowType.DataRow) Then
                 Dim x As Date = DataBinder.Eval(e.Row.DataItem, "Fecha")

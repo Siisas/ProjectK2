@@ -97,7 +97,7 @@ Public Class Consgeneralfallatec
             lblmsg.Text = "Se produjo error " + ex.Message
         End Try
     End Sub
-    Private Sub dtgseguimiento_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgseguimiento.PageIndexChanging
+    Protected Sub dtgseguimiento_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgseguimiento.PageIndexChanging
         Try
             dtgseguimiento.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             cambioindicedtg1()
@@ -132,7 +132,7 @@ Public Class Consgeneralfallatec
         End Try
     End Sub
 
-    Private Sub dtgseguimientos_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgseguimientos.PageIndexChanging
+    Protected Sub dtgseguimientos_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgseguimientos.PageIndexChanging
         Try
             dtgseguimientos.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             cambioindicedtg2()

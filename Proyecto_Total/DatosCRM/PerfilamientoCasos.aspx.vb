@@ -98,7 +98,7 @@
 
     End Sub
 
-    Private Sub MostrarCasos()
+    Protected Sub MostrarCasos()
         Try
             Dim objdatos As New clscrmdatos
             objdatos.Validacion = "2"
@@ -114,7 +114,7 @@
 
     End Sub
 
-    Private Sub btnQuitar_Click(sender As Object, e As EventArgs) Handles btnQuitar.Click
+    Protected Sub btnQuitar_Click(sender As Object, e As EventArgs) Handles btnQuitar.Click
         Try
             Quitar()
 
@@ -125,7 +125,7 @@
 
     End Sub
 
-    Private Sub Quitar()
+    Protected Sub Quitar()
         Try
             If txtcasoasig.Text <> "" Then
                 txtcasoasig.Text = ""

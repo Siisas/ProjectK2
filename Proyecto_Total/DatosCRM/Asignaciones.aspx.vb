@@ -36,7 +36,7 @@
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span> " & ex.Message
         End Try
     End Sub
-    Private Sub Cargar_Drl()
+    Protected Sub Cargar_Drl()
         With Drl_Agentes
             .DataSource = objGeneral.consultaagentegrupo
             .DataTextField = "nombreu"
@@ -209,7 +209,7 @@
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span> " & ex.Message
         End Try
     End Sub
-    Private Sub Detalle()
+    Protected Sub Detalle()
         table.Columns.Add(New DataColumn("Codigo", GetType(String)))
         table.Columns.Add(New DataColumn("Agente", GetType(String)))
     End Sub
@@ -549,7 +549,7 @@
             ScriptManager.RegisterStartupScript(Page, GetType(Page), "P", "Pleg_Loading();", True)
         End If
     End Sub
-    Private Sub Dtg_Casos_Datos_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Casos_Datos.RowDataBound
+    Protected Sub Dtg_Casos_Datos_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Casos_Datos.RowDataBound
         Dim FcIngreso As Date
         If objdatos.Validacion = "Programado" Then
             If (e.Row.RowType = DataControlRowType.DataRow) Then
@@ -563,7 +563,7 @@
             End If
         End If
     End Sub
-    Private Sub Dtg_Estad_Datos_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Estad_Datos.RowDataBound
+    Protected Sub Dtg_Estad_Datos_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Estad_Datos.RowDataBound
         If objdatos.ajuste <> "Programados" Then
             If (e.Row.RowType = DataControlRowType.DataRow) Then
                 e.Row.Cells(1).ForeColor = Drawing.Color.White
@@ -762,7 +762,7 @@
             ScriptManager.RegisterStartupScript(Page, GetType(Page), "P", "Pleg_Loading();", True)
         End If
     End Sub
-    Private Sub Dtg_Casos_Dilo_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Casos_Dilo.RowDataBound
+    Protected Sub Dtg_Casos_Dilo_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Casos_Dilo.RowDataBound
         Dim FcIngreso As Date
         If objdatos.Validacion = "Programado" Then
             If (e.Row.RowType = DataControlRowType.DataRow) Then
@@ -776,7 +776,7 @@
             End If
         End If
     End Sub
-    Private Sub Dtg_Estad_Dilo_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Estad_Dilo.RowDataBound
+    Protected Sub Dtg_Estad_Dilo_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Estad_Dilo.RowDataBound
         If objdatos.ajuste <> "Programados" Then
             If (e.Row.RowType = DataControlRowType.DataRow) Then
                 e.Row.Cells(1).ForeColor = Drawing.Color.White
@@ -938,7 +938,7 @@
             ScriptManager.RegisterStartupScript(Page, GetType(Page), "P", "Pleg_Loading();", True)
         End If
     End Sub
-    Private Sub Dtg_Casos_Desact_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Casos_Desact.RowDataBound
+    Protected Sub Dtg_Casos_Desact_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Casos_Desact.RowDataBound
         Dim FcIngreso As Date
         If objdatos.Validacion = "Programado" Then
             If (e.Row.RowType = DataControlRowType.DataRow) Then
@@ -952,7 +952,7 @@
             End If
         End If
     End Sub
-    Private Sub Dtg_Estad_Desact_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Estad_Desact.RowDataBound
+    Protected Sub Dtg_Estad_Desact_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Estad_Desact.RowDataBound
         If objdatos.ajuste <> "Programados" Then
             If (e.Row.RowType = DataControlRowType.DataRow) Then
                 e.Row.Cells(1).ForeColor = Drawing.Color.White
@@ -1150,7 +1150,7 @@
             ScriptManager.RegisterStartupScript(Page, GetType(Page), "P", "Pleg_Loading();", True)
         End If
     End Sub
-    Private Sub Dtg_Casos_Inbound_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Casos_Inbound.RowDataBound
+    Protected Sub Dtg_Casos_Inbound_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Casos_Inbound.RowDataBound
         Dim FcIngreso As Date
         If objdatos.Validacion = "Programado" Then
             If (e.Row.RowType = DataControlRowType.DataRow) Then
@@ -1164,7 +1164,7 @@
             End If
         End If
     End Sub
-    Private Sub Dtg_Estad_Inbound_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Estad_Inbound.RowDataBound
+    Protected Sub Dtg_Estad_Inbound_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Estad_Inbound.RowDataBound
         If objdatos.ajuste <> "Programados" Then
             If (e.Row.RowType = DataControlRowType.DataRow) Then
                 e.Row.Cells(1).ForeColor = Drawing.Color.White
@@ -1323,7 +1323,7 @@
             ScriptManager.RegisterStartupScript(Page, GetType(Page), "P", "Pleg_Loading();", True)
         End If
     End Sub
-    Private Sub Dtg_Casos_BSCS_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Casos_BSCS.RowDataBound
+    Protected Sub Dtg_Casos_BSCS_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Casos_BSCS.RowDataBound
         Dim FcIngreso As Date
         If objdatos.Validacion = "Programado" Then
             If (e.Row.RowType = DataControlRowType.DataRow) Then
@@ -1337,7 +1337,7 @@
             End If
         End If
     End Sub
-    Private Sub Dtg_Estad_BSCS_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Estad_BSCS.RowDataBound
+    Protected Sub Dtg_Estad_BSCS_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Estad_BSCS.RowDataBound
         If objdatos.ajuste <> "Programados" Then
             If (e.Row.RowType = DataControlRowType.DataRow) Then
                 e.Row.Cells(1).ForeColor = Drawing.Color.White

@@ -213,7 +213,7 @@
     End Sub
 
 
-    Private Sub dtggeneral_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dtggeneral.RowDataBound
+    Protected Sub dtggeneral_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dtggeneral.RowDataBound
         Try
             If (e.Row.RowType = DataControlRowType.DataRow) Then
                 Dim x As Date = DataBinder.Eval(e.Row.DataItem, "Fecha")

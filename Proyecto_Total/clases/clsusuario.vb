@@ -104,8 +104,8 @@ Public Class clsusuario
         End Set
     End Property
 
-    Private Conexion_General = New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexioncontrol").ConnectionString)
-    Private Conexion_datosclaro = New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexion").ConnectionString)
+    Protected Conexion_General = New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexioncontrol").ConnectionString)
+    Protected Conexion_datosclaro = New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexion").ConnectionString)
 
     Public Function Validar_Usuario()
         Try

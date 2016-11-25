@@ -165,7 +165,7 @@
         End Try
     End Sub
 
-    Private Sub Consulta_Asignados()
+    Protected Sub Consulta_Asignados()
         Try
             Dim objdatos As New clscrmdatos
             objdatos.idusuario = lblusuario.Text
@@ -1616,7 +1616,7 @@
         End Try
     End Sub
 
-    Private Sub drlCausa_Raiz_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drlCausa_Raiz.SelectedIndexChanged
+    Protected Sub drlCausa_Raiz_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drlCausa_Raiz.SelectedIndexChanged
         Try
             Dim objdatos As New clsgeneral
             If drlCausa_Raiz.SelectedValue <> Nothing Then
@@ -1798,7 +1798,7 @@
     End Sub
 
 
-    Private Sub drltsoporte_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drltsoporte.SelectedIndexChanged
+    Protected Sub drltsoporte_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drltsoporte.SelectedIndexChanged
         Try
             Dim objdatos As New clsgeneral
             objdatos.Validacion = "Grupo"
@@ -1941,7 +1941,7 @@
         End Try
     End Sub
 
-    Private Sub Drl_No_Existen_Cambios_Administrativos_Sobre_Linea_Cuenta_Maestra_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles Drl_No_Existen_Cambios_Administrativos_Sobre_Linea_Cuenta_Maestra.SelectedIndexChanged
+    Protected Sub Drl_No_Existen_Cambios_Administrativos_Sobre_Linea_Cuenta_Maestra_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles Drl_No_Existen_Cambios_Administrativos_Sobre_Linea_Cuenta_Maestra.SelectedIndexChanged
         Try
             If Drl_No_Existen_Cambios_Administrativos_Sobre_Linea_Cuenta_Maestra.SelectedItem.Text = "FALSO" Then
                 Drl_Split_Billing.Visible = True

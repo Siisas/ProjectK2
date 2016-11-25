@@ -1,16 +1,16 @@
 ﻿Public Class clsChat
     ''Chat_Notas
-    Private _Cod_Chat_Notas As Integer
-    Private _Fecha_Creacion As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Aletar As Boolean
+    Protected _Cod_Chat_Notas As Integer
+    Protected _Fecha_Creacion As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Aletar As Boolean
     ''Detalle_Chat_Notas
-    Private _Cod_Detalle_Chat_Notas As Integer
-    Private _Fecha_Reg As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Obs As String
-    Private _Fk_Idusuario As String
-    Private _Fk_Cod_Chat_Notas As Integer
-    Private _Id_Usuarios As String
-    Private _Cantidad As Integer
+    Protected _Cod_Detalle_Chat_Notas As Integer
+    Protected _Fecha_Reg As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Obs As String
+    Protected _Fk_Idusuario As String
+    Protected _Fk_Cod_Chat_Notas As Integer
+    Protected _Id_Usuarios As String
+    Protected _Cantidad As Integer
 
     Public Property Cantidad As Integer
         Get

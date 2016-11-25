@@ -36,7 +36,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub asignado()
+    Protected Sub asignado()
         Try
             Dim objdatos As New clscrmdatos
             
@@ -148,7 +148,7 @@
         End Try
     End Sub
 
-    Private Sub busca()
+    Protected Sub busca()
         Try
             Dim objdatos As New clscrmdatos
             If txtcaso.Text <> "" Then
@@ -219,7 +219,7 @@
         End Try
     End Sub
 
-    Private Sub dtgestad_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgestad.PageIndexChanging
+    Protected Sub dtgestad_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgestad.PageIndexChanging
         Try
             Dim objdatos As New clscrmdatos
             dtgestad.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
@@ -266,7 +266,7 @@
         End Try
     End Sub
 
-    Private Sub Cargar_lbl()
+    Protected Sub Cargar_lbl()
         Dim objdatos As New clscrmdatos
 
         objdatos.idusuario = lblusuario.Text
@@ -288,7 +288,7 @@
     End Sub
    
 
-    Private Sub dtgBusqueda_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgBusqueda.PageIndexChanging
+    Protected Sub dtgBusqueda_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgBusqueda.PageIndexChanging
         Try
             Dim objdatos As New clscrmdatos
             dtgBusqueda.PageIndex = e.NewPageIndex

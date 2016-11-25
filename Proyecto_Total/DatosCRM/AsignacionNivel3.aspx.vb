@@ -91,7 +91,7 @@
             Me.lblmsg.Text = "se ha producido un error:" & ex.Message
         End Try
     End Sub
-    Private Sub asignado()
+    Protected Sub asignado()
         Try
             Dim objdatos As New clscrmdatos
             objdatos.cantidad = "10000"

@@ -42,7 +42,7 @@
         End Try
     End Sub
 
-    Private Sub asignado()
+    Protected Sub asignado()
         Try
             Dim objdatos As New clscrmdatos
 
@@ -103,7 +103,7 @@
         End Try
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Protected Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click
         Try
             lblmsg.Text = ""
             Dim objdatos As New clscrmdatos
@@ -183,7 +183,7 @@
 
  
 
-    Private Sub dtggeneral_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dtggeneral.RowDataBound
+    Protected Sub dtggeneral_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dtggeneral.RowDataBound
         Dim FcIngreso As Date
 
         If (e.Row.RowType = DataControlRowType.DataRow) Then
@@ -204,7 +204,7 @@
     
     End Sub
 
-    Private Sub limpiar()
+    Protected Sub limpiar()
         txtcantidad.Text = ""
         txtcaso.Text = ""
         drlBandeja.SelectedItem.Text = "- Seleccione -"
@@ -217,7 +217,7 @@
         lblprueba.Text = ""
     End Sub
 
-    Private Sub dtgbusqueda_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgbusqueda.PageIndexChanging
+    Protected Sub dtgbusqueda_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgbusqueda.PageIndexChanging
         Try
             Dim objdatos As New clscrmdatos
             If txtcantidad.Text <> "" Then
@@ -242,7 +242,7 @@
         End Try
     End Sub
 
-    Private Sub dtggeneral_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
+    Protected Sub dtggeneral_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtggeneral.PageIndexChanging
         Try
             Dim objdatos As New clscrmdatos
             dtggeneral.PageIndex = e.NewPageIndex
@@ -252,7 +252,7 @@
             lblmsg.Text = "Se produjo error " + ex.Message
         End Try
     End Sub
-    Private Sub dtgUsuarios_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgUsuarios.PageIndexChanging
+    Protected Sub dtgUsuarios_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgUsuarios.PageIndexChanging
         Try
             Dim objdatos As New clscrmdatos
             dtgUsuarios.PageIndex = e.NewPageIndex

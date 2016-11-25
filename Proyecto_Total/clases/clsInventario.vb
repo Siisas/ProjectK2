@@ -2,69 +2,69 @@
 
 Public Class clsInventario
     ''Inventario
-    Private _Cod_Inventario As Integer
-    Private _Fk_Cod_Invent_Dispositivo As Integer
-    Private _FcReg_Invent As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Id_Usuario As String
-    Private _Marca As String
-    Private _Modelo As String
-    Private _Serial As String
-    Private _Empresa As String
-    Private _Fk_ID_Modulo As String
-    Private _Sede As String
-    Private _Estado As String
-    Private _Cod_Agente As String
-    Private _Descripcion As String
-    Private _Dispositivoconsulta As String
+    Protected _Cod_Inventario As Integer
+    Protected _Fk_Cod_Invent_Dispositivo As Integer
+    Protected _FcReg_Invent As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Id_Usuario As String
+    Protected _Marca As String
+    Protected _Modelo As String
+    Protected _Serial As String
+    Protected _Empresa As String
+    Protected _Fk_ID_Modulo As String
+    Protected _Sede As String
+    Protected _Estado As String
+    Protected _Cod_Agente As String
+    Protected _Descripcion As String
+    Protected _Dispositivoconsulta As String
     ''Modulo
-    Private _Cod_Invent_Modulo As Integer
-    Private _Letra As String
-    Private _Numero As Integer
-    Private _ID_Modulo As String
+    Protected _Cod_Invent_Modulo As Integer
+    Protected _Letra As String
+    Protected _Numero As Integer
+    Protected _ID_Modulo As String
     ''Dispositivo
-    Private _Cantidad As Int64
-    Private _Cod_Invent_Dispositivo As Integer
-    Private _Nombre_Dispositivo As String
-    Private _Tipo_Dispositivo As String
-    Private _Observacion As String
-    Private _Letra_Categoria As String
+    Protected _Cantidad As Int64
+    Protected _Cod_Invent_Dispositivo As Integer
+    Protected _Nombre_Dispositivo As String
+    Protected _Tipo_Dispositivo As String
+    Protected _Observacion As String
+    Protected _Letra_Categoria As String
     ''Invetario detalle
-    Private _Cod_Inventario_Detalle As Integer
-    Private _FecReg_InventD As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
-    Private _Fk_Cod_Inventario As Integer
-    Private _Serial_Kamilion As String
-    Private _Todo As String
-    Private _Validacion As String
+    Protected _Cod_Inventario_Detalle As Integer
+    Protected _FecReg_InventD As String = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+    Protected _Fk_Cod_Inventario As Integer
+    Protected _Serial_Kamilion As String
+    Protected _Todo As String
+    Protected _Validacion As String
 
     '''Inventario Activos Fijo'''
     Public Nombre As String
-    Private Pertenece As String
-    Private clasificacion As String
-    Private Sigla As String
-    Private _Zona As String
-    Private _Nombre_Activo As String
-    Private _Responsable As String
-    Private sub_Responsable As String
-    Private No_Acta_Baja As String
-    Private Observacion_Cambio As String
-    Private _valida As Integer
-    Private _Cantidad1 As Integer
-    Private ruta As String
-    Private Dtactivos As Object
-    Private documento As Integer
-    Private cargo As String
-    Private area As String
-    Private _cod_Acta As String
+    Protected Pertenece As String
+    Protected clasificacion As String
+    Protected Sigla As String
+    Protected _Zona As String
+    Protected _Nombre_Activo As String
+    Protected _Responsable As String
+    Protected sub_Responsable As String
+    Protected No_Acta_Baja As String
+    Protected Observacion_Cambio As String
+    Protected _valida As Integer
+    Protected _Cantidad1 As Integer
+    Protected ruta As String
+    Protected Dtactivos As Object
+    Protected documento As Integer
+    Protected cargo As String
+    Protected area As String
+    Protected _cod_Acta As String
     Protected strlfc_mto As String
     Dim DteXCEL As New DataTable ''Registro Masivo
     Protected strlMto As String
     Protected strltipo As String
     Protected strlNombreEquipo As String
     Dim fecha As DateTime = Now ''Registro Masivo
-    Private _Fc_ruta As String ''Registro Masivo
+    Protected _Fc_ruta As String ''Registro Masivo
 
     Dim Con_Admin As New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
-    Private _Cod_Tipo As Integer
+    Protected _Cod_Tipo As Integer
     Public Property Cod_Tipo As Integer
         Get
             Return _Cod_Tipo
@@ -73,7 +73,7 @@ Public Class clsInventario
             _Cod_Tipo = value
         End Set
     End Property
-    Private _Cod_Componente As Integer
+    Protected _Cod_Componente As Integer
     Public Property Cod_Componente As Integer
         Get
             Return _Cod_Componente
@@ -82,7 +82,7 @@ Public Class clsInventario
             _Cod_Componente = value
         End Set
     End Property
-    Private _Cod_Estado As Integer
+    Protected _Cod_Estado As Integer
     Public Property Cod_Estado As Integer
         Get
             Return _Cod_Estado
@@ -91,7 +91,7 @@ Public Class clsInventario
             _Cod_Estado = value
         End Set
     End Property
-    Private _Cod_Fabricante As Integer
+    Protected _Cod_Fabricante As Integer
     Public Property Cod_Fabricante As Integer
         Get
             Return _Cod_Fabricante
@@ -100,7 +100,7 @@ Public Class clsInventario
             _Cod_Fabricante = value
         End Set
     End Property
-    Private _Referencia As String
+    Protected _Referencia As String
     Public Property Referencia As String
         Get
             Return _Referencia
@@ -109,7 +109,7 @@ Public Class clsInventario
             _Referencia = value
         End Set
     End Property
-    Private _Capacidad As String
+    Protected _Capacidad As String
     Public Property Capacidad As String
         Get
             Return _Capacidad
@@ -118,7 +118,7 @@ Public Class clsInventario
             _Capacidad = value
         End Set
     End Property
-    Private _Cod_Equipo As Integer
+    Protected _Cod_Equipo As Integer
     Public Property Cod_Equipo As Integer
         Get
             Return _Cod_Equipo
@@ -2609,7 +2609,7 @@ Public Class clsInventario
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ''''Asignacion modulos - Control de Malla Mesas de Soporte'''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Private _Turno As String
+    Protected _Turno As String
 
     Public Property Turno As String
         Get

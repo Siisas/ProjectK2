@@ -17,7 +17,7 @@
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span> Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub Cargar_DRL()
+    Protected Sub Cargar_DRL()
         Dim objdatos As New clsgeneral
         Dim objdatosban As New clscrmdatos
         With drlusuario
@@ -90,7 +90,7 @@
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span> Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub busca()
+    Protected Sub busca()
         Try
             Dim objdatos As New clscrmdatos
 

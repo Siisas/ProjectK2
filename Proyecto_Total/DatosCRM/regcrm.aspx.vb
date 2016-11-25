@@ -204,7 +204,7 @@
             lblmsg.Text = "Se presento error: " + ex.Message
         End Try
     End Sub
-    Private Sub consultafallamasiva()
+    Protected Sub consultafallamasiva()
         Try
             Dim objdatos As New clscrmdatos
             objdatos.consultafallamasiva()
@@ -236,7 +236,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub cargadrl()
+    Protected Sub cargadrl()
         Try
             Dim objdatos As New clsgeneral
             'linea
@@ -1951,7 +1951,7 @@
         End Try
     End Sub
 
-    Private Sub dtgasig_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgasig.PageIndexChanging
+    Protected Sub dtgasig_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgasig.PageIndexChanging
         Try
             dtgasig.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             traeprogramados()
@@ -1960,7 +1960,7 @@
         End Try
     End Sub
 
-    Private Sub dtgprog_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgprog.PageIndexChanging
+    Protected Sub dtgprog_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles dtgprog.PageIndexChanging
         Try
             dtgprog.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             traeprogramados()
@@ -2723,7 +2723,7 @@
         End Try
     End Sub
 
-    Private Sub Drl_No_Existen_Cambios_Administrativos_Sobre_Linea_Cuenta_Maestra_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles Drl_No_Existen_Cambios_Administrativos_Sobre_Linea_Cuenta_Maestra.SelectedIndexChanged
+    Protected Sub Drl_No_Existen_Cambios_Administrativos_Sobre_Linea_Cuenta_Maestra_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles Drl_No_Existen_Cambios_Administrativos_Sobre_Linea_Cuenta_Maestra.SelectedIndexChanged
         Try
             If Drl_No_Existen_Cambios_Administrativos_Sobre_Linea_Cuenta_Maestra.SelectedItem.Text = "FALSO" Then
                 Drl_Split_Billing.Visible = True
@@ -2736,7 +2736,7 @@
 
     End Sub
 
-    Private Sub drlCausa_Raiz_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drlCausa_Raiz.SelectedIndexChanged
+    Protected Sub drlCausa_Raiz_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drlCausa_Raiz.SelectedIndexChanged
         Try
             Dim objdatos As New clsgeneral
             If drlCausa_Raiz.SelectedValue <> Nothing Then
@@ -2847,7 +2847,7 @@
 
 
 
-    Private Sub dtgprog_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dtgprog.RowDataBound
+    Protected Sub dtgprog_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dtgprog.RowDataBound
         Try
             Dim FcActual As Date = Date.Now.ToString("dd/MM/yyyy")
             If (e.Row.RowType = DataControlRowType.DataRow) Then
@@ -2904,7 +2904,7 @@
     End Sub
 
 
-    Private Sub CargarServicio()
+    Protected Sub CargarServicio()
         Try
             Dim objdatos As New clsgeneral
             'linea

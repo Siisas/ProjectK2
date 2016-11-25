@@ -179,7 +179,7 @@ Public Class Consulta_Falla_Des
         End Try
     End Sub
 
-    Private Sub DtgGestion_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles DtgGestion.RowDataBound
+    Protected Sub DtgGestion_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles DtgGestion.RowDataBound
         If (e.Row.RowType = DataControlRowType.DataRow) Or (e.Row.RowType = DataControlRowType.Header) Then
             e.Row.Cells(9).Visible = False
             If DataBinder.Eval(e.Row.DataItem, "Estado") = "Eliminado" Then

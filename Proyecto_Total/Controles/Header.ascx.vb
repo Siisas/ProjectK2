@@ -22,7 +22,7 @@
             End If
         End If
     End Sub
-    Private Sub Seguridad()
+    Protected Sub Seguridad()
         Obj_General.idusuario = CType(Session("permisos"), clsusuario).usuario
         Obj_General.DtsSeguridad = Session("dtsSeguridad")
         Dim Url_frag = Request.RawUrl.Split("/")
@@ -37,7 +37,7 @@
         Obj_General.PaginaAcceso = Url
         Obj_General.PermisosUrl()
     End Sub
-    Private Sub Menu_Load()
+    Protected Sub Menu_Load()
         Dim Dts_Items As DataSet = Session("dtsSeguridad")
         For Each drMenuItem As Data.DataRow In Dts_Items.Tables(0).Rows
             If drMenuItem("MenuId").Equals(drMenuItem("PadreId")) Then
@@ -52,7 +52,7 @@
             End If
         Next
     End Sub
-    Private Sub AddMenuItem(ByRef mnuMenuItem As MenuItem, ByVal dtMenuItems As Data.DataTable)
+    Protected Sub AddMenuItem(ByRef mnuMenuItem As MenuItem, ByVal dtMenuItems As Data.DataTable)
         'recorremos cada elemento del datatable para poder determinar cuales son elementos hijos
         'del menuitem dado pasado como parametro ByRef.
         For Each drMenuItem As Data.DataRow In dtMenuItems.Rows
@@ -69,7 +69,7 @@
             End If
         Next
     End Sub
-    Private Sub MenuItem_Click(ByVal sender As Object, ByVal e As MenuEventArgs) Handles menugest.MenuItemClick
+    Protected Sub MenuItem_Click(ByVal sender As Object, ByVal e As MenuEventArgs) Handles menugest.MenuItemClick
         If menugest.SelectedItem.Text = "Salir" Then
             Session.Clear()
             FormsAuthentication.SignOut()

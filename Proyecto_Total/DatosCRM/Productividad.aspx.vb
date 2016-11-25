@@ -131,7 +131,7 @@ Public Class Productividad1
         Dtg_Total_Horas.DataSource = miDataTable
         Dtg_Total_Horas.DataBind()
     End Sub
-    Private Sub Dtg_Productividad_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Productividad.RowDataBound
+    Protected Sub Dtg_Productividad_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Productividad.RowDataBound
         Try
             If (e.Row.RowType = DataControlRowType.DataRow) Then
                 For index = 6 To 21
@@ -155,7 +155,7 @@ Public Class Productividad1
             Pliegue()
         End Try
     End Sub
-    Private Sub Dtg_Campañas_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Campañas.RowDataBound
+    Protected Sub Dtg_Campañas_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles Dtg_Campañas.RowDataBound
         Try
             If (e.Row.RowType = DataControlRowType.DataRow) Then
                 e.Row.Cells(0).ForeColor = Drawing.Color.White

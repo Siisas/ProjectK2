@@ -23,7 +23,7 @@ Public Class RetroCalidad_Agente
         End Try
     End Sub
 
-    Private Sub ConsultaRetro()
+    Protected Sub ConsultaRetro()
         Try
             ObjRetroCal.Id_Usuario = CType(Session("permisos"), clsusuario).usuario
             Session("dtggeneral_RetroCalidadV2") = ObjRetroCal.Busqueda_Avanzada
@@ -44,7 +44,7 @@ Public Class RetroCalidad_Agente
         End Try
     End Sub
 
-    Private Sub dtgConsultas_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtgConsultas.PageIndexChanging
+    Protected Sub dtgConsultas_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles dtgConsultas.PageIndexChanging
         Try
             dtgConsultas.PageIndex = e.NewPageIndex 'asigna la consulta a la grilla por paginas
             dtgConsultas.DataSource = Session("dtggeneral_RetroCalidadV2")
@@ -56,7 +56,7 @@ Public Class RetroCalidad_Agente
         End Try
     End Sub
 
-    Private Sub dtgConsultas_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles dtgConsultas.RowCommand
+    Protected Sub dtgConsultas_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles dtgConsultas.RowCommand
         Try
             Dim Index As Integer
             Dim retro As String

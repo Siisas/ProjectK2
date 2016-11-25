@@ -18,7 +18,7 @@
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span>" & ex.Message
         End Try
     End Sub
-    Private Sub cargadrl()
+    Protected Sub cargadrl()
         Try
             Dim objdatos As New clsgeneral
             With drltipificacionll

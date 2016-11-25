@@ -1,8 +1,8 @@
 ﻿Public Class RegCRM_BSCS
     Inherits System.Web.UI.Page
     Dim control As String
-    Private Obj_General As New clsgeneral
-    Private Obj_G_D As New Cls_Gestion_Datos
+    Protected Obj_General As New clsgeneral
+    Protected Obj_G_D As New Cls_Gestion_Datos
     'inicio
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
@@ -1599,7 +1599,7 @@
         End Try
     End Sub
     'DRL SOLICITUD
-    Private Sub drlsolicitud_SelectedIndexChanged(sender As Object, e As EventArgs) Handles drlsolicitud.SelectedIndexChanged
+    Protected Sub drlsolicitud_SelectedIndexChanged(sender As Object, e As EventArgs) Handles drlsolicitud.SelectedIndexChanged
         Try
             With drlSegmento
                 If drlsolicitud.SelectedIndex > 0 Then
@@ -1654,7 +1654,7 @@
         End Try
     End Sub
     'DRL CAUSA RAIZ
-    Private Sub drlCausa_Raiz_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drlCausa_Raiz.SelectedIndexChanged
+    Protected Sub drlCausa_Raiz_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drlCausa_Raiz.SelectedIndexChanged
         Try
             With drltipificacionll
                 If drlCausa_Raiz.SelectedIndex > 0 Then

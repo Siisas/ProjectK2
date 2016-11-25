@@ -23,7 +23,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub traemes()
+    Protected Sub traemes()
         Try
             Dim objdatos As New clscrmdatos
             Dim rata As Decimal
@@ -94,7 +94,7 @@
         End Try
     End Sub
 
-    Private Sub limpia()
+    Protected Sub limpia()
         lblvlr1.Text = ""
         lblvlr2.Text = ""
         lblvlr3.Text = ""
@@ -169,7 +169,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub asigna()
+    Protected Sub asigna()
         Try
             Dim celda As Integer
             Dim valor As String
@@ -248,7 +248,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub suma()
+    Protected Sub suma()
         Try
             If lblvlr3.Text = "" Then
                 lblvlr3.Text = 0
@@ -289,7 +289,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub pendientes()
+    Protected Sub pendientes()
         Try
             Dim objdatos As New clscrmdatos
             objdatos.fcini = txtfcini.Text
@@ -314,7 +314,7 @@
             lblmsg.Text = "Se produjo error " & ex.Message
         End Try
     End Sub
-    Private Sub formato()
+    Protected Sub formato()
         Try
             lblvlr1.Text = FormatNumber(lblvlr1.Text, 0)
             lblvlr2.Text = FormatNumber(lblvlr2.Text, 0)

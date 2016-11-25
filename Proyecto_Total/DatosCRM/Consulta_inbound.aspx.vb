@@ -20,7 +20,7 @@
         End Try
     End Sub
 
-    Private Sub Carga_drl()
+    Protected Sub Carga_drl()
         Try
             Dim ObjGeneral As New clsgeneral
             ''Campaña
@@ -53,7 +53,7 @@
         End Try
     End Sub
 
-    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
+    Protected Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
         Try
             Dim ObjDatos As New clscrmdatos
             Dim dts As DataSet
@@ -122,7 +122,7 @@
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span> " & ex.Message
         End Try
     End Sub
-    Private Sub dtggeneral_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dtggeneral.RowDataBound
+    Protected Sub dtggeneral_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dtggeneral.RowDataBound
         If (e.Row.RowType = DataControlRowType.DataRow) Or (e.Row.RowType = DataControlRowType.Header) Then
             e.Row.Cells(8).Visible = False
             If DataBinder.Eval(e.Row.DataItem, "Estado") = "Eliminado" Then
